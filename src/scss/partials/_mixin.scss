@@ -1,0 +1,137 @@
+@mixin _Img(
+  $width: null,
+  $height: null,
+  $margin: null,
+  $object_f: null,
+  $object_p: null,
+  $border: null,
+  $border_r: null,
+  $cursor: null,
+  $justify_con: null,
+  ) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  object-fit: $object_f;
+  object-position: $object_p;
+  border: $border;
+  border-radius: $border_r;
+  cursor: $cursor;
+  justify-content: $justify_con;
+
+}
+
+@mixin _txt(
+  $f_size: null,
+  $f_weight: null,
+  $colors: null,
+  $l_height: null,
+  $text_align: null,
+  $txt_dec: null,
+  $txt_transform: null,
+  $margin: null,
+  $padding: null,
+  $l_style: null,
+  $width: null,
+  $height: null,) {
+  font-size: $f_size;
+  font-weight: $f_weight;
+  color: $colors;
+  line-height: $l_height;
+  text-align: $text_align;
+  text-decoration: $txt_dec;
+  text-transform: $txt_transform;
+  margin: $margin;
+  padding: $padding;
+  list-style: $l_style;
+  width: $width;
+  height: $height;
+}
+
+@mixin _a(
+  $width: null,
+  $height: null,
+  $text-align: null,
+  $border-r: null,
+  $box-shadow: null,
+  $padding: null,
+  $margin: null,
+  $border: null,
+  $transition: null,
+  $a_items: null,
+  $f_size: null,
+  $b_color: null,
+  $colors: null,
+  $f_weight: null,
+  $transform: null,
+  $cursor: null,
+  ) {
+  width: $width;
+  height: $height;
+  text-align: $text-align;
+  border-radius: $border-r;
+  box-shadow: $box-shadow;
+  padding: $padding;
+  margin: $margin;
+  border: $border;
+  transition: $transition;
+  align-items: $a_items;
+  font-size: $f_size;
+  background-color: $b_color;
+  color: $colors;
+  font-weight: $f_weight;
+  cursor: $cursor;
+
+}
+
+@mixin _position(
+  $position: null,
+  $top: null,
+  $bottom: null,
+  $left: null,
+  $right: null,
+  $colors: null,
+  $b_color: null,
+  $background: null,
+  $f_size: null,
+  $f_weight: null,
+  $f_fam: null,
+  $width: null,
+  $height: null,
+  $padding: null,
+  $z-index: null,
+  $content: null,
+  $overflow: null,
+  $l_height: null,
+  $transform: null,
+  $back_pos: null,
+  $back_repeat: null,
+  $back_img: null,
+  $back_size: null,
+
+
+) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  color: $colors;
+  background-color: $b_color;
+  background: $background;
+  font-size: $f_size;
+  font-weight: $f_weight;
+  font-family: $f_fam;
+  width: $width;
+  height: $height;
+  padding: $padding;
+  z-index: $z-index;
+  content: $content;
+  overflow: $overflow;
+  line-height: $l_height;
+  transform: $transform;
+  background-position :$back_pos;
+  background-repeat: $back_repeat;
+  background-image :$back_img;
+  background-size: $back_size;
+}

@@ -1,0 +1,10 @@
+#testhome {
+  background-color: black;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+}
+#testhome p {
+  color: white;
+  line-height: 150%;
+}/*# sourceMappingURL=style.css.map */
