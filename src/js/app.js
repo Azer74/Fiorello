@@ -24,3 +24,56 @@ if (closeBtn) {
     })
 
 }
+
+const navSearch=document.querySelector(".nav_search")
+const SearchPopUP=document.querySelector(".search_popup")
+
+if (navSearch) {
+    navSearch.addEventListener("click",()=>{
+        if (SearchPopUP.style.height=="0px") {
+            SearchPopUP.style.height="100%"
+        }
+        else{
+            SearchPopUP.style.height="0px"
+        }
+    })
+}
+
+const acc1 = document.querySelector('#acc1')
+if (acc1) {
+    acc1.addEventListener('click', () => {
+        document.querySelector('#hidden1').classList.toggle('active')
+    })
+}
+const acc2 = document.querySelector('#acc2')
+if (acc2) {
+    acc2.addEventListener('click', () => {
+        document.querySelector('#hidden2').classList.toggle('active')
+    })
+}
+
+
+const acc3 = document.querySelector('#acc3')
+if (acc3) {
+    acc3.addEventListener('click', () => {
+        document.querySelector('#hidden3').classList.toggle('active')
+    })
+}
+const acc4 = document.querySelector('#acc4')
+if (acc4) {
+    acc4.addEventListener('click', () => {
+        document.querySelector('#hidden4').classList.toggle('active')
+    })
+}
+const acc5 = document.querySelector('#acc5')
+if (acc5) {
+    acc5.addEventListener('click', () => {
+        document.querySelector('#hidden5').classList.toggle('active')
+    })
+}
+const acc6 = document.querySelector('#acc6')
+if (acc6) {
+    acc6.addEventListener('click', () => {
+        document.querySelector('#hidden6').classList.toggle('active')
+    })
+}

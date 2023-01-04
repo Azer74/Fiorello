@@ -6,6 +6,7 @@ body {
         font-family: $second_font;
         height: 115px;
         background-color: white;
+        position: relative;
 
         @media(max-width: 1200px) {
             height: 100%;
@@ -446,6 +447,7 @@ body {
                     align-items: center;
                     gap: 15px;
                     cursor: pointer;
+                    position: relative;
 
                     .cart_icon {
                         position: relative;
@@ -480,10 +482,90 @@ body {
                         font-size: 12px;
                         white-space: nowrap;
                     }
+
+                    .shopping_cart_dropdown {
+                        position: absolute;
+                        top: 100%;
+                        left: auto;
+                        right: 0;
+                        width: 245px;
+                        background-color: #fff;
+                        border: 1px solid #e8e8e8;
+                        text-align: left;
+                        z-index: 1000;
+                        max-height: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        overflow: hidden;
+                        transition: opacity .2s, max-height 0s linear .15s;
+
+                        ul {
+                            margin: 23px 20px;
+                            padding: 0;
+
+                            .empty_cart {
+                                color: #737373;
+                                font-size: 13px;
+                                font-weight: 500;
+                                font-family: Montserrat, sans-serif;
+                                height: 100%;
+                                width: 100%;
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .shopping_cart_dropdown {
+                            max-height: max-content;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search_popup {
+            position: absolute;
+            top: 100%;
+            left: 64%;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 0px;
+            overflow: hidden;
+            transition: all .5s ease;
+
+            form {
+                background-color: #fff;
+                width: 100%;
+                display: flex;
+                padding: 6px 0;
+
+                input {
+                    width: 85%;
+                    border: none;
+                    font-size: 12px;
+                    padding: 0 0px 0 20px;
+                    height: 44px;
+                }
+
+                .input_btn {
+                    width: 15%;
+                    padding-left: 10px;
+                    border: none;
+                    transform: scale(-1, 1);
+                    background-color: white;
+
+                    i {
+                        color: #9a9a9a;
+                    }
                 }
             }
         }
     }
+
     #mobile_nav {
         font-family: $second_font;
         background-color: white;
@@ -548,7 +630,7 @@ body {
                 @media(max-width:420px) {
                     width: 100%;
                 }
-
+                overflow-y: scroll;
                 padding: 56px 51px 80px 75px;
                 list-style: none;
                 margin: 0;
@@ -586,40 +668,68 @@ body {
                     }
                 }
 
-                li {
-                    display: flex;
-                    align-items: center;
-
-                    a {
-                        color: #322e43;
-                        font-size: 12.5px;
-                        font-weight: 500;
-                        letter-spacing: .1em;
-                        padding: 11px 0;
-                        margin-right: 2px;
-                        height: 46px;
+                .accord_all {
+                     .accord-visible {
+                        cursor: pointer;
                         display: flex;
                         align-items: center;
-                    }
 
-                    .home_line {
-                        position: relative;
+                        a {
+                            color: black;
+                            font-size: 12.5px;
+                            font-weight: 500;
+                            letter-spacing: .1em;
+                            padding: 11px 0;
+                            margin-right: 2px;
+                            height: 46px;
+                            display: flex;
+                            align-items: center;
+                        }
 
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 29.5px;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            background-color: #727272;
-                            height: 1px;
+                        .home_line {
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 29.5px;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: #727272;
+                                height: 1px;
+                            }
+                        }
+
+                        i {
+                            font-size: 9px;
+                            color: #727272;
                         }
                     }
 
-                    i {
-                        font-size: 9px;
-                        color: #727272;
+                    .accord-hidden {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        height: 0;
+                        overflow: hidden;
+                        transition: all .5s ease;
+                        li{
+                            font-size: 12px;
+                            height: 32px;
+                            line-height: 32px;
+                            color: #8b8b8b;
+                            span{
+                              border-bottom: 1px solid #8b8b8b;
+                            }
+                        }
+                    }
+        
+                    .active {
+                        height: 100%;
                     }
                 }
 
@@ -632,5 +742,5 @@ body {
         }
 
     }
-    
+
 }
