@@ -1,3 +1,13 @@
 @import "partials/variable";
 @import "partials/mixin";
+@import "layout/navbar";
+@import "layout/footer";
 @import "pages/home/home";
+
+*{
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none !important;
+}
