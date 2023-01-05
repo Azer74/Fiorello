@@ -77,3 +77,12 @@ if (acc6) {
         document.querySelector('#hidden6').classList.toggle('active')
     })
 }
+
+var swiper = new Swiper(".card_slide", {
+    spaceBetween: 30,
+    effect: "fade",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
