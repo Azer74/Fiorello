@@ -81,8 +81,31 @@ if (acc6) {
 var swiper = new Swiper(".card_slide", {
     spaceBetween: 30,
     effect: "fade",
+    centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   });
+
+// var indexValue = 0;
+// function slideShow() {
+//     setTimeout(slideShow, 2000)
+//     var x;
+//     const img =document.querySelectorAll(".autoswipe")
+//     for (x = 0; x < img.length; x++) {
+//         img[x].style.display = "none";
+        
+//     }
+//     indexValue++
+//     if (indexValue > img.length) {
+//         indexValue = 1
+//     }
+//     img[indexValue -1].style.display="block"
+// }
+
+// slideShow();
