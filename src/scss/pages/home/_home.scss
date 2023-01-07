@@ -467,47 +467,58 @@ body {
                     }
                 }
             }
-            .video_right_texts{
+
+            .video_right_texts {
                 margin: 30px 40px;
-                @media(max-width:1400px){
+
+                @media(max-width:1400px) {
                     margin: 0px 40px;
                 }
-                @media(max-width:1024px){
+
+                @media(max-width:1024px) {
                     margin: 0px 0px 0 40px;
                 }
-                @media(max-width:992px){
+
+                @media(max-width:992px) {
                     margin: 50px 0px 0 0px;
                 }
-                h2{
+
+                h2 {
                     font-family: $nineteen_font;
                     font-size: 38px;
                     font-weight: 300;
                     line-height: 1.447em;
-                    @media(max-width:680px){
+
+                    @media(max-width:680px) {
                         font-size: 30px;
                     }
-                    span{
+
+                    span {
                         color: #f34f3f;
                     }
                 }
-                p{
+
+                p {
                     margin-top: 27px;
                     font-family: $twelwe_font;
                     font-size: 17px;
                     line-height: 29px;
                     color: #6d6a6a;
                 }
-                ul{
+
+                ul {
                     font-family: $twelwe_font;
                     list-style: none;
                     padding: 0;
                     margin: 35px 0 0 0;
-                    li{
+
+                    li {
                         color: #6d6a6a;
                         display: flex;
                         align-items: center;
                         margin-bottom: 19px;
-                        img{
+
+                        img {
                             width: 19px;
                             height: 18px;
                             margin-right: 15px;
@@ -515,6 +526,42 @@ body {
                     }
                 }
             }
+        }
+        #exampleModal {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        
+            .modal-dialog {
+                transform: none;
+                max-width: 920px;
+                max-height: 517px;
+        
+                .modal-content {
+                    border: none;
+                    border-radius: none;
+                    background-color: transparent;
+        
+                    .modal-body {
+                        width: 920px;
+                        height: 517px;
+                        padding: 0;
+        
+                        .video-frame {
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+        
+                            iframe {
+                                width: 920px;
+                                height: 517px;
+                            }
+        
+                        }
+                    }
+                }
+            }
+        
         }
     }
 }

@@ -1170,6 +1170,33 @@ body main #videosection .video_right_texts ul li img {
   height: 18px;
   margin-right: 15px;
 }
+body main #exampleModal::-webkit-scrollbar {
+  display: none;
+}
+body main #exampleModal .modal-dialog {
+  transform: none;
+  max-width: 920px;
+  max-height: 517px;
+}
+body main #exampleModal .modal-dialog .modal-content {
+  border: none;
+  border-radius: none;
+  background-color: transparent;
+}
+body main #exampleModal .modal-dialog .modal-content .modal-body {
+  width: 920px;
+  height: 517px;
+  padding: 0;
+}
+body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame iframe {
+  width: 920px;
+  height: 517px;
+}
 
 * {
   box-sizing: border-box !important;
