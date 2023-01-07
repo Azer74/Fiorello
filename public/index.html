@@ -814,7 +814,7 @@
         <section id="slider_background">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 px-0">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0" id="pos_relative">
                         <div class="swiper card_slide">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -843,19 +843,15 @@
                                 <img src="../src/images/previous.png" alt="">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-5" id="container_absolute">
-                <div class="row px-5 h-100 align-items-center">
-                    <div class="col-5">
-                        <div class="swiper_text">
-                            <h3>Send <span>flowers</span> like you mean it.</h3>
-                            <p>Where flowers are our inspiration to create lasting memories. Whatever the occasion, our
-                                flowers will make it special cursus a sit amet mauris.</p>
-                            <div class="sara_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/h2-sign-img.png"
-                                    alt="">
+                        <div class="col-lg-4 col-md-6 col-sm-12" id="pos_absolute">
+                            <div class="swiper_text">
+                                <h3>Send <span>flowers</span> like you mean it.</h3>
+                                <p>Where flowers are our inspiration to create lasting memories. Whatever the occasion, our
+                                    flowers will make it special cursus a sit amet mauris.</p>
+                                <div class="sara_image">
+                                    <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/h2-sign-img.png"
+                                        alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -866,194 +862,49 @@
             <div class="container">
                 <div class="row">
                     <div class="col-10">
-                        <ul>
-                            <li><a href="#">ALL</a></li>
-                            <li><a href="#">CACTUSES</a></li>
-                            <li><a href="#">EXOTIC</a></li>
-                            <li><a href="#">GREENS</a></li>
-                            <li><a href="#">POPULAR</a></li>
-                            <li><a href="#">VARIOUS</a></li>
-                            <li><a href="#">WINTER</a></li>
+                        <ul id="buttons">
+                            <li><button class="button-value" onclick="filterProduct('all')">ALL</button></li>
+                            <li><button class="button-value" onclick="filterProduct('cactuses')">CACTUSES</button></li>
+                            <li><button class="button-value" onclick="filterProduct('exotic')">EXOTIC</button></li>
+                            <li><button class="button-value" onclick="filterProduct('greens')">GREENS</button></li>
+                            <li><button class="button-value" onclick="filterProduct('popular')">POPULAR</button></li>
+                            <li><button class="button-value" onclick="filterProduct('various')">VARIOUS</button></li>
+                            <li><button class="button-value" onclick="filterProduct('winter')">WINTER</button></li>
                         </ul>
                     </div>
                     <div class="col-2">
                         <div class="filter_mouse_on">
-                            <span>FILTER</span>
-                            <i class="bi bi-caret-down-fill"></i>
+                            <span>FILTER<i class="bi bi-caret-down-fill"></i></span>
+                            <div class="filter_popup">
+                                <div class="sort_by">
+                                    <h5>Sort By</h5>
+                                    <ul>
+                                        <li><a href="#">Default</a></li>
+                                        <li><a href="#">Popularity</a></li>
+                                        <li><a href="#">Newness</a></li>
+                                        <li><a href="#">Price: Low To High</a></li>
+                                        <li><a href="#">Price: High To Low</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sort_by">
+                                    <h5>Price Range</h5>
+                                    <ul>
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">$0-$10</a></li>
+                                        <li><a href="#">$10-$20</a></li>
+                                        <li><a href="#">$20-$30</a></li>
+                                        <li><a href="#">$30-$40</a></li>
+                                        <li><a href="#">40$+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container mt-4 px-0">
-                <div class="row pt-2">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>MAJESTY PALM</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span>$259</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-13-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>FOXGLOVE FLOWER</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span>$259</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>SWEET ALYSSUM</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span>$259</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-11-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>SPRING SNOWFLAKE</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span>$170</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-12-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>SCARLET SAGE</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span class="oldprice">$259</span><span class="newprice">$159</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-9-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>ROCK SOAPWORT</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span>$259</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4  col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-8-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>SUMMER SAVORY</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span>$259</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-4">
-                        <div class="filter_card">
-                            <div class="card_image">
-                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-7-img.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_items">
-                                <h6>WILD ROSES</h6>
-                                <div class="card_action">
-                                    <div class="card_btm_changing">
-                                        <div class="card_cart">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="card_price">
-                                            <span>$259</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row pt-2" id="map_row">
+                    
                 </div>
             </div>
         </section>

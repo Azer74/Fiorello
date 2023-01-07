@@ -753,6 +753,45 @@ body main {
 }
 body main #slider_background {
   position: relative;
+  height: 100%;
+}
+body main #slider_background #pos_relative {
+  position: relative;
+}
+body main #slider_background #pos_relative #pos_absolute {
+  font-family: "Playfair Display", serif;
+  position: absolute;
+  top: 20%;
+  left: 13%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+body main #slider_background #pos_relative #pos_absolute .swiper_text {
+  margin: 0 15px;
+}
+body main #slider_background #pos_relative #pos_absolute .swiper_text h3 {
+  font-size: 41px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  width: 80%;
+}
+body main #slider_background #pos_relative #pos_absolute .swiper_text h3 span {
+  color: #ff0000;
+}
+body main #slider_background #pos_relative #pos_absolute .swiper_text p {
+  font-family: "Lora", serif;
+  line-height: 30px;
+  font-size: 17px;
+  color: #6d6a6a;
+  font-weight: 400;
+  margin-bottom: 25px;
+  width: 90%;
+}
+@media (max-width: 480px) {
+  body main #slider_background #pos_relative #pos_absolute .swiper_text p {
+    display: none;
+  }
 }
 body main #slider_background .swiper {
   width: 100%;
@@ -762,17 +801,45 @@ body main #slider_background .swiper .swiper-slide {
   background-position: center;
   background-size: cover;
 }
+body main #slider_background .swiper .swiper-slide .slider_image {
+  height: 100%;
+}
 body main #slider_background .swiper .swiper-slide .slider_image img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  body main #slider_background .swiper .swiper-slide .slider_image img {
+    height: 605px;
+  }
+}
+@media (max-width: 480px) {
+  body main #slider_background .swiper .swiper-slide .slider_image img {
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 body main #slider_background .swiper .swiper-button-next {
   padding-right: 40px;
 }
+@media (max-width: 1024px) {
+  body main #slider_background .swiper .swiper-button-next {
+    padding: 0;
+    top: 4%;
+    height: 100%;
+    width: 100px;
+  }
+}
 body main #slider_background .swiper .swiper-button-next img {
   width: 60px;
+}
+@media (max-width: 1024px) {
+  body main #slider_background .swiper .swiper-button-next img {
+    display: none;
+  }
 }
 body main #slider_background .swiper .swiper-button-next::after {
   display: none;
@@ -780,40 +847,24 @@ body main #slider_background .swiper .swiper-button-next::after {
 body main #slider_background .swiper .swiper-button-prev {
   padding-left: 40px;
 }
+@media (max-width: 1024px) {
+  body main #slider_background .swiper .swiper-button-prev {
+    padding: 0;
+    top: 4%;
+    height: 100%;
+    width: 100px;
+  }
+}
 body main #slider_background .swiper .swiper-button-prev img {
   width: 60px;
 }
+@media (max-width: 1024px) {
+  body main #slider_background .swiper .swiper-button-prev img {
+    display: none;
+  }
+}
 body main #slider_background .swiper .swiper-button-prev::after {
   display: none;
-}
-body main #slider_background #container_absolute {
-  font-family: "Playfair Display", serif;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-body main #slider_background .swiper_text {
-  margin: 0 15px;
-}
-body main #slider_background .swiper_text h3 {
-  font-size: 41px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  width: 80%;
-}
-body main #slider_background .swiper_text h3 span {
-  color: #ff0000;
-}
-body main #slider_background .swiper_text p {
-  font-family: "Lora", serif;
-  line-height: 30px;
-  font-size: 17px;
-  color: #6d6a6a;
-  font-weight: 400;
-  margin-bottom: 25px;
 }
 body main #filtering {
   padding: 70px 0;
@@ -825,30 +876,85 @@ body main #filtering ul {
   padding: 0;
   gap: 35px;
 }
-body main #filtering ul li a {
+body main #filtering ul li .button-value {
+  border: none;
+  background-color: transparent;
   font-size: 12px;
   color: #1b1b1b;
   font-weight: 500;
   letter-spacing: 1px;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
-body main #filtering ul li a:hover {
+body main #filtering ul li .button-value:hover {
+  color: #f34f3f;
+}
+body main #filtering ul li .active {
   color: #f34f3f;
 }
 body main #filtering .filter_mouse_on {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
+  position: relative;
 }
 body main #filtering .filter_mouse_on span {
-  margin-right: 10px;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
+  cursor: pointer;
 }
-body main #filtering .filter_mouse_on i {
+body main #filtering .filter_mouse_on span i {
+  margin-left: 10px;
   font-size: 13px;
+}
+body main #filtering .filter_mouse_on:hover .filter_popup {
+  opacity: 1;
+  z-index: 3;
+}
+body main #filtering .filter_mouse_on .filter_popup {
+  position: absolute;
+  opacity: 0;
+  top: 25px;
+  right: -8px;
+  display: flex;
+  gap: 30px;
+  color: #737373;
+  background-color: #fff;
+  text-align: left;
+  padding: 13px 30px 17px;
+  width: 424px;
+  transition: all 0.25s ease;
+  z-index: -1;
+}
+body main #filtering .filter_mouse_on .filter_popup .sort_by {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+body main #filtering .filter_mouse_on .filter_popup .sort_by h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  line-height: 1.363em;
+  margin: 20px 0;
+  color: #2b2b2b;
+}
+body main #filtering .filter_mouse_on .filter_popup .sort_by ul {
+  list-style: none;
+  margin: 15px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body main #filtering .filter_mouse_on .filter_popup .sort_by ul li a {
+  font-size: 13px;
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.2s ease-out;
+}
+body main #filtering .filter_mouse_on .filter_popup .sort_by ul li a:hover {
+  color: #000;
 }
 body main #filtering .filter_card {
   margin-bottom: 50px;
@@ -864,6 +970,7 @@ body main #filtering .filter_card:hover .card_items .card_action .card_btm_chang
 body main #filtering .filter_card .card_image {
   width: 100%;
   cursor: pointer;
+  position: relative;
 }
 body main #filtering .filter_card .card_image:hover img {
   transform: scale3d(1.02, 1.02, 1.02);
@@ -872,6 +979,41 @@ body main #filtering .filter_card .card_image img {
   width: 100%;
   transition: all 0.25s ease;
 }
+body main #filtering .filter_card .card_image .sold_banner {
+  font-family: "Playfair Display", serif;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  right: 0;
+  background-color: #1b1b1b;
+  color: white;
+  width: 60px;
+  text-align: center;
+  line-height: 30px;
+}
+body main #filtering .filter_card .card_image .sale_banner {
+  font-family: "Playfair Display", serif;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  right: 0;
+  width: 60px;
+  text-align: center;
+  line-height: 30px;
+  background-color: white;
+}
+body main #filtering .filter_card .card_image .new_banner {
+  font-family: "Playfair Display", serif;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  right: 0;
+  width: 60px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  background-color: #f34f3f;
+}
 body main #filtering .filter_card .card_items {
   margin-top: 23px;
   text-align: center;
@@ -879,6 +1021,7 @@ body main #filtering .filter_card .card_items {
 body main #filtering .filter_card .card_items h6 {
   font-size: 12px;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 body main #filtering .filter_card .card_items .card_action .card_btm_changing {
   width: 70px;
@@ -913,7 +1056,7 @@ body main #filtering .filter_card .card_items .card_action .card_btm_changing .c
   left: 0;
   right: 0;
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
   transform: translateX(0px);
 }
 body main #filtering .filter_card .card_items .card_action .card_btm_changing .card_price span {
@@ -927,6 +1070,9 @@ body main #filtering .filter_card .card_items .card_action .card_btm_changing .c
 body main #filtering .filter_card .card_items .card_action .card_btm_changing .card_price .newprice {
   color: #1b1b1b;
   margin-left: 8px;
+}
+body main #filtering .hide {
+  display: none;
 }
 
 * {

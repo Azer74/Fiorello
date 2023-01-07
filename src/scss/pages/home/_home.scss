@@ -8,6 +8,50 @@ body {
 
         #slider_background {
             position: relative;
+            height: 100%;
+
+            #pos_relative {
+                position: relative;
+
+                #pos_absolute {
+                    font-family: $nineteen_font;
+                    position: absolute;
+                    top: 20%;
+                    left: 13%;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1;
+
+                    .swiper_text {
+                        margin: 0 15px;
+
+                        h3 {
+                            font-size: 41px;
+                            font-weight: 400;
+                            margin-bottom: 20px;
+                            width: 80%;
+
+                            span {
+                                color: #ff0000;
+                            }
+                        }
+
+                        p {
+                            font-family: $twelwe_font;
+                            line-height: 30px;
+                            font-size: 17px;
+                            color: #6d6a6a;
+                            font-weight: 400;
+                            margin-bottom: 25px;
+                            width: 90%;
+
+                            @media(max-width: 480px) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
 
             .swiper {
                 width: 100%;
@@ -18,16 +62,27 @@ body {
                     background-size: cover;
 
                     .slider_image {
+                        height: 100%;
+
                         img {
                             display: block;
                             object-fit: cover;
                             width: 100%;
+                            height: 100%;
+
+                            @media(max-width: 1024px) {
+                                height: 605px;
+                            }
+
+                            @media(max-width: 480px) {
+                                object-position: center;
+                            }
                         }
                     }
 
                     // .kenburneseffect {
                     //     width: 100%;
-                    //     height: 50vh;
+                    //     height: 65vh;
                     //     margin: 0 auto;
                     //     overflow: hidden;
                     //     position: relative;
@@ -39,7 +94,7 @@ body {
                     //     }
                     //     @keyframes move {
                     //         0% {
-                    //             transform-origin: bottom left;
+                    //             transform-origin: center center;
                     //             transform: scale(1.0);
                     //         }
 
@@ -53,8 +108,19 @@ body {
                 .swiper-button-next {
                     padding-right: 40px;
 
+                    @media(max-width:1024px) {
+                        padding: 0;
+                        top: 4%;
+                        height: 100%;
+                        width: 100px;
+                    }
+
                     img {
                         width: 60px;
+
+                        @media(max-width:1024px) {
+                            display: none;
+                        }
                     }
 
                     &::after {
@@ -65,47 +131,24 @@ body {
                 .swiper-button-prev {
                     padding-left: 40px;
 
+                    @media(max-width:1024px) {
+                        padding: 0;
+                        top: 4%;
+                        height: 100%;
+                        width: 100px;
+                    }
+
                     img {
                         width: 60px;
+
+                        @media(max-width:1024px) {
+                            display: none;
+                        }
                     }
 
                     &::after {
                         display: none;
                     }
-                }
-            }
-
-            #container_absolute {
-                font-family: $nineteen_font;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 1;
-            }
-
-            .swiper_text {
-                margin: 0 15px;
-
-                h3 {
-                    font-size: 41px;
-                    font-weight: 400;
-                    margin-bottom: 20px;
-                    width: 80%;
-
-                    span {
-                        color: #ff0000;
-                    }
-                }
-
-                p {
-                    font-family: $twelwe_font;
-                    line-height: 30px;
-                    font-size: 17px;
-                    color: #6d6a6a;
-                    font-weight: 400;
-                    margin-bottom: 25px;
                 }
             }
         }
@@ -121,16 +164,24 @@ body {
                 gap: 35px;
 
                 li {
-                    a {
+                    .button-value {
+                        border: none;
+                        background-color: transparent;
                         font-size: 12px;
                         color: #1b1b1b;
                         font-weight: 500;
                         letter-spacing: 1px;
                         transition: all .5s ease;
+                        cursor: pointer;
 
                         &:hover {
                             color: #f34f3f;
                         }
+
+                    }
+
+                    .active {
+                        color: #f34f3f;
                     }
                 }
             }
@@ -139,32 +190,92 @@ body {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                cursor: pointer;
-
+                position: relative;
                 span {
-                    margin-right: 10px;
                     font-size: 12px;
                     font-weight: 500;
                     letter-spacing: 1px;
+                    cursor: pointer;
+
+                    i {
+                        margin-left: 10px;
+                        font-size: 13px;
+                    }
                 }
 
-                i {
-                    font-size: 13px;
+                &:hover{
+                    .filter_popup{
+                        opacity: 1;
+                        z-index: 3;
+                    }
+                }
+
+                .filter_popup {
+                    position: absolute;
+                    opacity: 0;
+                    top: 25px;
+                    right: -8px;
+                    display: flex;
+                    gap: 30px;
+                    color: #737373;
+                    background-color: #fff;
+                    text-align: left;
+                    padding: 13px 30px 17px;
+                    width: 424px;
+                    transition: all .25s ease;
+                    z-index: -1;
+
+                    .sort_by {
+                        display: inline-block;
+                        vertical-align: top;
+                        text-align: left;
+
+                        h5 {
+                            font-family: $nineteen_font;
+                            font-size: 22px;
+                            line-height: 1.363em;
+                            margin: 20px 0;
+                            color: #2b2b2b;
+                        }
+
+                        ul {
+                            list-style: none;
+                            margin: 15px 0;
+                            padding: 0;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+
+                            li {
+                                a {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    color: inherit;
+                                    transition: color .2s ease-out;
+                                    &:hover{
+                                        color: #000;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
             }
 
             .filter_card {
                 margin-bottom: 50px;
+
                 &:hover {
                     .card_items {
                         .card_action {
-                            .card_btm_changing{
+                            .card_btm_changing {
                                 .card_cart {
                                     opacity: 1;
                                     transform: translateX(0px);
                                 }
-                                .card_price{
+
+                                .card_price {
                                     opacity: 0;
                                     transform: translateX(70px);
                                 }
@@ -176,14 +287,55 @@ body {
                 .card_image {
                     width: 100%;
                     cursor: pointer;
-                    &:hover{
-                        img{
+                    position: relative;
+
+                    &:hover {
+                        img {
                             transform: scale3d(1.02, 1.02, 1.02);
                         }
                     }
+
                     img {
                         width: 100%;
                         transition: all .25s ease;
+                    }
+
+                    .sold_banner {
+                        font-family: $nineteen_font;
+                        position: absolute;
+                        top: 10px;
+                        left: 12px;
+                        right: 0;
+                        background-color: #1b1b1b;
+                        color: white;
+                        width: 60px;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+
+                    .sale_banner {
+                        font-family: $nineteen_font;
+                        position: absolute;
+                        top: 10px;
+                        left: 12px;
+                        right: 0;
+                        width: 60px;
+                        text-align: center;
+                        line-height: 30px;
+                        background-color: white;
+                    }
+
+                    .new_banner {
+                        font-family: $nineteen_font;
+                        position: absolute;
+                        top: 10px;
+                        left: 12px;
+                        right: 0;
+                        width: 60px;
+                        text-align: center;
+                        line-height: 30px;
+                        color: white;
+                        background-color: #f34f3f;
                     }
                 }
 
@@ -194,6 +346,7 @@ body {
                     h6 {
                         font-size: 12px;
                         cursor: pointer;
+                        letter-spacing: 1px;
                     }
 
                     .card_action {
@@ -204,6 +357,7 @@ body {
                             position: relative;
                             margin: 0 auto;
                             overflow: hidden;
+
                             .card_cart {
                                 position: absolute;
                                 top: 0;
@@ -213,14 +367,16 @@ body {
                                 transition: all .5s ease;
                                 transform: translateX(-70px);
                                 cursor: pointer;
+
                                 span {
                                     font-size: 12px;
                                     color: #afafaf;
                                     font-weight: 500;
                                     transition: .3s ease-in-out;
                                 }
-                                &:hover{
-                                    span{
+
+                                &:hover {
+                                    span {
                                         color: #f34f3f;
                                     }
                                 }
@@ -232,17 +388,20 @@ body {
                                 left: 0;
                                 right: 0;
                                 opacity: 1;
-                                transition: all .5s ease;
+                                transition: all .2s ease;
                                 transform: translateX(0px);
+
                                 span {
                                     margin: 0 auto;
                                     font-size: 12px;
                                     color: #afafaf;
                                 }
-                                .oldprice{
+
+                                .oldprice {
                                     text-decoration: line-through !important;
                                 }
-                                .newprice{
+
+                                .newprice {
                                     color: #1b1b1b;
                                     margin-left: 8px;
                                 }
@@ -251,6 +410,10 @@ body {
 
                     }
                 }
+            }
+
+            .hide {
+                display: none;
             }
         }
     }
