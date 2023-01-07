@@ -614,7 +614,6 @@ body {
         }
 
         #parallax {
-            margin-bottom: 100px;
             padding: 200px 0;
             background-image: url(https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-background-img.jpg);
             background-position: 50% 0px;
@@ -689,6 +688,59 @@ body {
                     @media(max-width:480px) {
                         margin-right: 90px;
                      }
+                }
+            }
+        }
+        #blog_section{
+            background-color: #f8f8f8;
+            padding: 100px 0;
+            h2{
+                text-align: center;
+                font-family: $nineteen_font;
+            }
+            p{
+                text-align: center;
+                font-family: $twelwe_font;
+            }
+            .wide_card{
+                margin-bottom: 50px;
+                .blog_photo{
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    .date_banner{
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        right: 0;
+                        width: 97px;
+                        height: 32px;
+                        background-color: white;
+                        text-align: center;
+                        color: black;
+                        line-height: 32px;
+                        letter-spacing: 1px;
+                        font-size: 10px;
+                        font-weight: 600;
+                    }
+                }
+                .blog_items{
+                    margin-top: 35px;
+                    text-align: center;
+                    h4{
+                        margin-bottom: 20px;
+                        font-size: 22px;
+                        font-weight: 300;
+                        font-family: $nineteen_font;
+                    }
+                    .blog_text{
+                        font-family: $twelwe_font;
+                        font-size: 15px;
+                        color: #6d6a6a;
+                        line-height: 25px;
+                        padding: 0 35px;
+                    }
                 }
             }
         }
