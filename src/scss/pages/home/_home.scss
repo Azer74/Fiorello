@@ -191,6 +191,7 @@ body {
                 justify-content: flex-end;
                 align-items: center;
                 position: relative;
+
                 span {
                     font-size: 12px;
                     font-weight: 500;
@@ -203,8 +204,8 @@ body {
                     }
                 }
 
-                &:hover{
-                    .filter_popup{
+                &:hover {
+                    .filter_popup {
                         opacity: 1;
                         z-index: 3;
                     }
@@ -252,7 +253,8 @@ body {
                                     font-weight: 500;
                                     color: inherit;
                                     transition: color .2s ease-out;
-                                    &:hover{
+
+                                    &:hover {
                                         color: #000;
                                     }
                                 }
@@ -414,6 +416,104 @@ body {
 
             .hide {
                 display: none;
+            }
+        }
+
+        #videosection {
+            padding: 120px 0;
+            background-color: #f7f7f7;
+
+            .zastvaka_i_video {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                &:hover {
+                    img {
+                        transform: scale3d(1.03, 1.03, 1.03);
+
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    transition: all .25s ease;
+                }
+
+                .player_position {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .player_button {
+                        background-color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+
+                        iconify-icon {
+                            font-size: 35px;
+                            color: #f34f3f;
+                        }
+                    }
+                }
+            }
+            .video_right_texts{
+                margin: 30px 40px;
+                @media(max-width:1400px){
+                    margin: 0px 40px;
+                }
+                @media(max-width:1024px){
+                    margin: 0px 0px 0 40px;
+                }
+                @media(max-width:992px){
+                    margin: 50px 0px 0 0px;
+                }
+                h2{
+                    font-family: $nineteen_font;
+                    font-size: 38px;
+                    font-weight: 300;
+                    line-height: 1.447em;
+                    @media(max-width:680px){
+                        font-size: 30px;
+                    }
+                    span{
+                        color: #f34f3f;
+                    }
+                }
+                p{
+                    margin-top: 27px;
+                    font-family: $twelwe_font;
+                    font-size: 17px;
+                    line-height: 29px;
+                    color: #6d6a6a;
+                }
+                ul{
+                    font-family: $twelwe_font;
+                    list-style: none;
+                    padding: 0;
+                    margin: 35px 0 0 0;
+                    li{
+                        color: #6d6a6a;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 19px;
+                        img{
+                            width: 19px;
+                            height: 18px;
+                            margin-right: 15px;
+                        }
+                    }
+                }
             }
         }
     }
