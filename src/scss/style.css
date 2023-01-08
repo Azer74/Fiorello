@@ -743,6 +743,44 @@ body #mobile_nav .nav-items #menu-body .accord_all .active {
   height: 100%;
 }
 
+footer {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fefaf3;
+}
+footer #footer_top {
+  padding: 73px 0;
+}
+@media (max-width: 680px) {
+  footer #footer_top {
+    padding: 73px 50px;
+  }
+}
+footer #footer_top .foot_list_card {
+  margin-bottom: 30px;
+}
+footer #footer_top .foot_list_card h5 {
+  font-size: 12px;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+footer #footer_top .foot_list_card ul {
+  margin: 25px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+footer #footer_top .foot_list_card ul li {
+  margin-bottom: 3px;
+}
+footer #footer_top .foot_list_card ul li a {
+  color: #8b8b8b;
+  font-size: 12px;
+  transition: all 0.25s ease;
+}
+footer #footer_top .foot_list_card ul li a:hover {
+  color: #f34f3f;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -1377,6 +1415,11 @@ body main #blog_section .wide_card .blog_photo .date_banner {
   letter-spacing: 1px;
   font-size: 10px;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+body main #blog_section .wide_card .blog_photo .date_banner:hover {
+  color: #f34f3f;
 }
 body main #blog_section .wide_card .blog_items {
   margin-top: 35px;
@@ -1396,7 +1439,7 @@ body main #blog_section .wide_card .blog_items .blog_text {
   padding: 0 35px;
 }
 body main #loop_swiper {
-  padding: 130px 0;
+  padding: 120px 0 112px 0;
 }
 body main #loop_swiper .swiper {
   width: 100%;
@@ -1434,7 +1477,7 @@ body main #loop_swiper .swiper .swiper-slide .loop_texts h3 {
   color: #4b4747;
 }
 body main #loop_swiper .swiper .swiper-slide .loop_texts h6 {
-  margin-top: 50px;
+  margin-top: 45px;
   font-size: 12px;
   letter-spacing: 1px;
 }
