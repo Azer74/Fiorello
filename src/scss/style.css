@@ -734,6 +734,10 @@ body #mobile_nav .nav-items #menu-body .accord_all .accord-hidden li {
   line-height: 32px;
   color: #8b8b8b;
 }
+html #mobile_nav .nav-items #menu-body .accord_all .accord-hidden li a,
+body #mobile_nav .nav-items #menu-body .accord_all .accord-hidden li a {
+  color: #8b8b8b;
+}
 html #mobile_nav .nav-items #menu-body .accord_all .accord-hidden li span,
 body #mobile_nav .nav-items #menu-body .accord_all .accord-hidden li span {
   border-bottom: 1px solid #8b8b8b;
