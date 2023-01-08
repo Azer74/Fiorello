@@ -1693,6 +1693,42 @@ body main #loop_swiper .swiper .swiper-button-prev::after {
   display: none;
 }
 
+#get_in_touch {
+  padding: 120px 0;
+}
+#get_in_touch .grey_card {
+  background-color: #f8f8f8;
+  padding: 50px 60px;
+}
+#get_in_touch .grey_card .person_photo {
+  display: flex;
+  justify-content: center;
+}
+#get_in_touch .grey_card .card_bottom {
+  text-align: center;
+  margin: 15px 0 40px 0;
+}
+#get_in_touch .grey_card .card_bottom h2 {
+  font-size: 38px;
+  font-family: "Playfair Display", serif;
+  line-height: 55px;
+  font-weight: 300;
+}
+#get_in_touch .grey_card .card_bottom h2 span {
+  color: #f34f3f;
+}
+#get_in_touch .grey_card .card_bottom p {
+  font-family: "Lora", serif;
+  color: #6d6a6a;
+  font-size: 17px;
+  margin: 29px 0 0px 0;
+  line-height: 1.6em;
+}
+#get_in_touch .grey_card .sign {
+  display: flex;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
