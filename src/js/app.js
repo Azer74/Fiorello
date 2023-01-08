@@ -110,6 +110,13 @@ var swiper = new Swiper(".card_slide", {
 
 // slideShow();
 
+const Categories = document.querySelector('#click_category')
+if (Categories) {
+    Categories.addEventListener('click', () => {
+        document.querySelector('.popup_categories').classList.toggle('height100')
+    })
+}
+
 const products = {
     data: [
         {

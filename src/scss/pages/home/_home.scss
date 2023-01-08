@@ -31,6 +31,23 @@ body {
                             margin-bottom: 20px;
                             width: 80%;
 
+                            // @media(max-width:1400px){
+                            //    width: 100%;
+                            // }
+                            @media(max-width:574px) {
+                                font-size: 39px;
+                                width: 70%;
+                            }
+
+                            @media(max-width:480px) {
+                                font-size: 33px;
+                            }
+
+                            @media(max-width:420px) {
+                                font-size: 30px;
+                            }
+
+
                             span {
                                 color: #ff0000;
                             }
@@ -44,6 +61,11 @@ body {
                             font-weight: 400;
                             margin-bottom: 25px;
                             width: 90%;
+
+                            @media(max-width:1400px) {
+                                width: 100%;
+                                ;
+                            }
 
                             @media(max-width: 480px) {
                                 display: none;
@@ -69,6 +91,14 @@ body {
                             object-fit: cover;
                             width: 100%;
                             height: 100%;
+
+                            @media(max-width: 1300px) {
+                                height: 430px;
+                            }
+
+                            @media(max-width: 1225px) {
+                                height: 500px;
+                            }
 
                             @media(max-width: 1024px) {
                                 height: 605px;
@@ -156,12 +186,20 @@ body {
         #filtering {
             padding: 70px 0;
 
+            @media(max-width:680px) {
+                padding: 70px 35px;
+            }
+
             ul {
                 display: flex;
                 list-style: none;
                 margin: 0;
                 padding: 0;
                 gap: 35px;
+
+                @media(max-width:992px) {
+                    display: none;
+                }
 
                 li {
                     .button-value {
@@ -186,11 +224,53 @@ body {
                 }
             }
 
+            .filter_categories {
+                display: none;
+                max-height: 250px;
+                @media(max-width:992px) {
+                    display: block;
+                }
+
+                #click_category {
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    i {
+                        margin-left: 10px;
+                    }
+                }
+
+                .popup_categories {
+                    background-color: white;
+                    max-height: 0px;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    transition: all .25s ease;
+                    #category_buttons {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0px;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                    }
+
+                }
+                .height100 {
+                    max-height: 200px;
+                }
+            }
+
             .filter_mouse_on {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
                 position: relative;
+                @media(max-width:992px){
+                    margin-top: 5px;
+                }
 
                 span {
                     font-size: 12px;
@@ -225,6 +305,11 @@ body {
                     width: 424px;
                     transition: all .25s ease;
                     z-index: -1;
+
+                    @media(max-width: 480px) {
+                        width: 260px;
+                        flex-direction: column;
+                    }
 
                     .sort_by {
                         display: inline-block;
@@ -423,6 +508,10 @@ body {
             padding: 120px 0;
             background-color: #f7f7f7;
 
+            @media(max-width:680px) {
+                padding: 120px 35px;
+            }
+
             .zastvaka_i_video {
                 width: 100%;
                 position: relative;
@@ -568,6 +657,10 @@ body {
         #florists {
             padding: 120px 0 70px 0;
 
+            @media(max-width:680px) {
+                padding: 120px 35px 70px 35px;
+            }
+
             h2 {
                 text-align: center;
                 font-family: $nineteen_font;
@@ -702,6 +795,10 @@ body {
             background-color: #f8f8f8;
             padding: 100px 0;
 
+            @media(max-width:680px) {
+                padding: 100px 35px;
+            }
+
             h2 {
                 text-align: center;
                 font-family: $nineteen_font;
@@ -758,8 +855,9 @@ body {
                         font-weight: 600;
                         cursor: pointer;
                         transition: .3s ease-in-out;
-                        &:hover{
-                          color: #f34f3f;
+
+                        &:hover {
+                            color: #f34f3f;
                         }
                     }
                 }
@@ -788,6 +886,7 @@ body {
 
         #loop_swiper {
             padding: 120px 0 112px 0;
+
             .swiper {
                 width: 100%;
                 height: 100%;
@@ -811,17 +910,20 @@ body {
                     -webkit-align-items: center;
                     align-items: center;
                     cursor: grab;
+
                     .image3 {
                         img {
                             display: block;
                             object-fit: cover;
                         }
                     }
-                    .loop_texts{
+
+                    .loop_texts {
                         margin-top: 40px;
                         text-align: center;
                         width: 70%;
-                        h3{
+
+                        h3 {
                             font-size: 24px;
                             font-family: $twelwe_font;
                             font-style: italic;
@@ -829,17 +931,20 @@ body {
                             line-height: 1.5em;
                             color: #4b4747;
                         }
-                        h6{
+
+                        h6 {
                             margin-top: 45px;
                             font-size: 12px;
                             letter-spacing: 1px;
                         }
-                        p{
+
+                        p {
                             font-size: 12px;
                             color: #afafaf;
                         }
                     }
                 }
+
                 .swiper-button-next {
                     padding-right: 40px;
 
@@ -875,7 +980,7 @@ body {
 
                     img {
                         width: 60px;
-                        
+
                         @media(max-width:1024px) {
                             display: none;
                         }

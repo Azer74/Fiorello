@@ -752,7 +752,7 @@ footer #footer_top {
 }
 @media (max-width: 680px) {
   footer #footer_top {
-    padding: 73px 50px;
+    padding: 73px 35px;
   }
 }
 footer #footer_top .foot_list_card {
@@ -814,6 +814,22 @@ body main #slider_background #pos_relative #pos_absolute .swiper_text h3 {
   margin-bottom: 20px;
   width: 80%;
 }
+@media (max-width: 574px) {
+  body main #slider_background #pos_relative #pos_absolute .swiper_text h3 {
+    font-size: 39px;
+    width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  body main #slider_background #pos_relative #pos_absolute .swiper_text h3 {
+    font-size: 33px;
+  }
+}
+@media (max-width: 420px) {
+  body main #slider_background #pos_relative #pos_absolute .swiper_text h3 {
+    font-size: 30px;
+  }
+}
 body main #slider_background #pos_relative #pos_absolute .swiper_text h3 span {
   color: #ff0000;
 }
@@ -825,6 +841,11 @@ body main #slider_background #pos_relative #pos_absolute .swiper_text p {
   font-weight: 400;
   margin-bottom: 25px;
   width: 90%;
+}
+@media (max-width: 1400px) {
+  body main #slider_background #pos_relative #pos_absolute .swiper_text p {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   body main #slider_background #pos_relative #pos_absolute .swiper_text p {
@@ -848,6 +869,16 @@ body main #slider_background .swiper .swiper-slide .slider_image img {
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1300px) {
+  body main #slider_background .swiper .swiper-slide .slider_image img {
+    height: 430px;
+  }
+}
+@media (max-width: 1225px) {
+  body main #slider_background .swiper .swiper-slide .slider_image img {
+    height: 500px;
+  }
 }
 @media (max-width: 1024px) {
   body main #slider_background .swiper .swiper-slide .slider_image img {
@@ -907,12 +938,22 @@ body main #slider_background .swiper .swiper-button-prev::after {
 body main #filtering {
   padding: 70px 0;
 }
+@media (max-width: 680px) {
+  body main #filtering {
+    padding: 70px 35px;
+  }
+}
 body main #filtering ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 35px;
+}
+@media (max-width: 992px) {
+  body main #filtering ul {
+    display: none;
+  }
 }
 body main #filtering ul li .button-value {
   border: none;
@@ -930,11 +971,52 @@ body main #filtering ul li .button-value:hover {
 body main #filtering ul li .active {
   color: #f34f3f;
 }
+body main #filtering .filter_categories {
+  display: none;
+  max-height: 250px;
+}
+@media (max-width: 992px) {
+  body main #filtering .filter_categories {
+    display: block;
+  }
+}
+body main #filtering .filter_categories #click_category {
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+body main #filtering .filter_categories #click_category i {
+  margin-left: 10px;
+}
+body main #filtering .filter_categories .popup_categories {
+  background-color: white;
+  max-height: 0px;
+  overflow: hidden;
+  margin-top: 10px;
+  transition: all 0.25s ease;
+}
+body main #filtering .filter_categories .popup_categories #category_buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body main #filtering .filter_categories .height100 {
+  max-height: 200px;
+}
 body main #filtering .filter_mouse_on {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
+}
+@media (max-width: 992px) {
+  body main #filtering .filter_mouse_on {
+    margin-top: 5px;
+  }
 }
 body main #filtering .filter_mouse_on span {
   font-size: 12px;
@@ -964,6 +1046,12 @@ body main #filtering .filter_mouse_on .filter_popup {
   width: 424px;
   transition: all 0.25s ease;
   z-index: -1;
+}
+@media (max-width: 480px) {
+  body main #filtering .filter_mouse_on .filter_popup {
+    width: 260px;
+    flex-direction: column;
+  }
 }
 body main #filtering .filter_mouse_on .filter_popup .sort_by {
   display: inline-block;
@@ -1116,6 +1204,11 @@ body main #videosection {
   padding: 120px 0;
   background-color: #f7f7f7;
 }
+@media (max-width: 680px) {
+  body main #videosection {
+    padding: 120px 35px;
+  }
+}
 body main #videosection .zastvaka_i_video {
   width: 100%;
   position: relative;
@@ -1237,6 +1330,11 @@ body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame if
 }
 body main #florists {
   padding: 120px 0 70px 0;
+}
+@media (max-width: 680px) {
+  body main #florists {
+    padding: 120px 35px 70px 35px;
+  }
 }
 body main #florists h2 {
   text-align: center;
@@ -1366,6 +1464,11 @@ body main #parallax form button {
 body main #blog_section {
   background-color: #f8f8f8;
   padding: 100px 0;
+}
+@media (max-width: 680px) {
+  body main #blog_section {
+    padding: 100px 35px;
+  }
 }
 body main #blog_section h2 {
   text-align: center;
