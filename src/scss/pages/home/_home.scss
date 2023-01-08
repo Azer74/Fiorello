@@ -697,17 +697,35 @@ body {
             h2{
                 text-align: center;
                 font-family: $nineteen_font;
+                margin-bottom: 30px;
+                font-size: 38px;
+                font-weight: 300;
+                @media(max-width:680px) {
+                    font-size: 30px;
+                }
+                
             }
             p{
                 text-align: center;
                 font-family: $twelwe_font;
+                color: #6d6a6a;
+                font-size: 17px;
+                line-height: 30px;
             }
             .wide_card{
                 margin-bottom: 50px;
+                cursor: pointer;
                 .blog_photo{
                     position: relative;
+                    overflow: hidden;
+                    &:hover{
+                        img{
+                            transform: scale3d(1.05, 1.05, 1.05);
+                        }
+                    }
                     img{
                         width: 100%;
+                        transition: all .25s ease;
                     }
                     .date_banner{
                         position: absolute;

@@ -1332,19 +1332,36 @@ body main #blog_section {
 body main #blog_section h2 {
   text-align: center;
   font-family: "Playfair Display", serif;
+  margin-bottom: 30px;
+  font-size: 38px;
+  font-weight: 300;
+}
+@media (max-width: 680px) {
+  body main #blog_section h2 {
+    font-size: 30px;
+  }
 }
 body main #blog_section p {
   text-align: center;
   font-family: "Lora", serif;
+  color: #6d6a6a;
+  font-size: 17px;
+  line-height: 30px;
 }
 body main #blog_section .wide_card {
   margin-bottom: 50px;
+  cursor: pointer;
 }
 body main #blog_section .wide_card .blog_photo {
   position: relative;
+  overflow: hidden;
+}
+body main #blog_section .wide_card .blog_photo:hover img {
+  transform: scale3d(1.05, 1.05, 1.05);
 }
 body main #blog_section .wide_card .blog_photo img {
   width: 100%;
+  transition: all 0.25s ease;
 }
 body main #blog_section .wide_card .blog_photo .date_banner {
   position: absolute;
