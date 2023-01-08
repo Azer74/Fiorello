@@ -748,11 +748,11 @@ footer {
   background-color: #fefaf3;
 }
 footer #footer_top {
-  padding: 73px 0;
+  padding: 73px 0 30px 0;
 }
 @media (max-width: 680px) {
   footer #footer_top {
-    padding: 73px 35px;
+    padding: 73px 35px 50px 35px;
   }
 }
 footer #footer_top .foot_list_card {
@@ -778,6 +778,62 @@ footer #footer_top .foot_list_card ul li a {
   transition: all 0.25s ease;
 }
 footer #footer_top .foot_list_card ul li a:hover {
+  color: #f34f3f;
+}
+@media (max-width: 680px) {
+  footer #footer_bottom {
+    padding: 0px 35px;
+  }
+}
+footer #footer_bottom .footer_line hr {
+  color: #a3a3a3;
+}
+footer #footer_bottom p {
+  font-size: 12px;
+  color: #afafaf;
+  margin-bottom: 0;
+}
+@media (max-width: 992px) {
+  footer #footer_bottom p {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
+footer #footer_bottom p a {
+  color: #6d6a6a;
+}
+footer #footer_bottom .foot_logos {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  footer #footer_bottom .foot_logos {
+    margin-bottom: 30px;
+  }
+}
+footer #footer_bottom .foot_logos img {
+  cursor: pointer;
+}
+footer #footer_bottom .inst_face {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  footer #footer_bottom .inst_face {
+    justify-content: center;
+  }
+}
+footer #footer_bottom .inst_face span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #afafaf;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+footer #footer_bottom .inst_face span:hover {
   color: #f34f3f;
 }
 

@@ -1,14 +1,17 @@
 footer {
     font-family: $second_font;
     background-color: #fefaf3;
-  
+
     #footer_top {
-        padding: 73px 0;
-        @media(max-width:680px){
-            padding: 73px 35px;
+        padding: 73px 0 30px 0;
+
+        @media(max-width:680px) {
+            padding: 73px 35px 50px 35px;
         }
+
         .foot_list_card {
             margin-bottom: 30px;
+
             h5 {
                 font-size: 12px;
                 color: black;
@@ -23,16 +26,72 @@ footer {
 
                 li {
                     margin-bottom: 3px;
+
                     a {
                         color: #8b8b8b;
                         font-size: 12px;
                         transition: all .25s ease;
-                        &:hover{
+
+                        &:hover {
                             color: #f34f3f;
                         }
                     }
                 }
             }
         }
+    }
+
+    #footer_bottom {
+        @media(max-width:680px) {
+            padding: 0px 35px;
+        }
+        .footer_line{
+            hr{
+                color: #a3a3a3;
+            }
+        }
+        p {
+            font-size: 12px;
+            color: #afafaf;
+            margin-bottom: 0;
+            @media(max-width:992px){
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: center;
+            }
+            a {
+                color: #6d6a6a;
+            }
+        }
+        .foot_logos{
+            display: flex;
+            justify-content: center;
+            @media(max-width:992px){
+                margin-bottom: 30px;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+        .inst_face{
+            display: flex;
+            justify-content: end;
+            gap: 30px;
+            margin-bottom: 20px;
+            @media(max-width:992px){
+                justify-content: center;
+            }
+            span{
+                font-size: 10px;
+                letter-spacing: 2px;
+                color: #afafaf;
+                cursor: pointer;
+                transition: .3s ease-in-out;
+                &:hover{
+                    color: #f34f3f;
+                }
+            }
+        }
+
     }
 }
