@@ -1694,7 +1694,7 @@ body main #loop_swiper .swiper .swiper-button-prev::after {
 }
 
 #get_in_touch {
-  padding: 120px 0;
+  padding: 120px 0 70px 0;
 }
 @media (max-width: 680px) {
   #get_in_touch {
