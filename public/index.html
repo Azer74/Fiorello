@@ -697,10 +697,26 @@
                                     <iconify-icon icon="material-symbols:shopping-bag-outline-sharp"></iconify-icon>
                                     <span class="red_cart_banner">0</span>
                                 </div>
-                                <p>CART ($0)</p>
+                                <p class="total_products_nav">CART ($0)</p>
                                 <div class="shopping_cart_dropdown">
-                                    <ul>
-                                        <li class="empty_cart">No products in the cart.</li>
+                                    <ul id="cart_adding_place">
+                                       <li class="empty_text">
+                                         No products in the cart.
+                                       </li>
+                                    </ul>
+                                    <ul class="cart_place_bottom">
+                                        <li class="cart_total_sum">
+                                            <div class="left_txt">
+                                                TOTAL : 
+                                            </div>
+                                            <div class="right_count">
+                                                <span class="total_sum_self">$0</span> 
+                                            </div>
+                                        </li>
+                                        <li class="space_action">
+                                            <button>VIEW CART</button>
+                                            <button class="checkout_btn">CHECKOUT</button>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
