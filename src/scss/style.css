@@ -1759,12 +1759,18 @@ body main #loop_swiper .swiper .swiper-button-prev::after {
 }
 
 #standard_product {
-  padding: 80px 0;
+  padding: 80px 0 0 0;
+  font-family: "Montserrat", sans-serif;
 }
 #standard_product .small_image {
   width: 118px;
   padding-bottom: 20px;
-  margin: 0 auto;
+  margin: 0 0px 0 15px;
+}
+@media (max-width: 1024px) {
+  #standard_product .small_image {
+    margin-left: 30px;
+  }
 }
 #standard_product .small_image img {
   width: 118px;
@@ -1772,14 +1778,143 @@ body main #loop_swiper .swiper .swiper-button-prev::after {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 1200px) {
+  #standard_product .small_image img {
+    width: 118px;
+    height: 83px;
+  }
+}
+@media (max-width: 1024px) {
+  #standard_product #big_photo {
+    margin-left: 13px;
+  }
+}
 #standard_product .big_image {
   width: 100%;
+}
+@media (max-width: 1200px) {
+  #standard_product .big_image {
+    padding: 0 0 0 15px;
+  }
 }
 #standard_product .big_image img {
   width: 100%;
   height: 640px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1200px) {
+  #standard_product .big_image img {
+    width: 305px;
+    height: 394px;
+  }
+}
+#standard_product .right_addcart_side {
+  padding-left: 50px;
+}
+#standard_product .right_addcart_side h2 {
+  font-size: 38px;
+  font-weight: 300;
+  color: #2b2b2b;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 5px;
+}
+#standard_product .right_addcart_side .product_price2 {
+  color: #afafaf;
+  font-size: 15px;
+}
+#standard_product .right_addcart_side .product_long_text {
+  font-size: 15px;
+  color: #6d6a6a;
+  font-family: "Lora", serif;
+  margin: 23px 0 32px;
+}
+#standard_product .right_addcart_side .addtocart_container {
+  display: flex;
+}
+#standard_product .right_addcart_side .addtocart_container .quantity_field {
+  display: flex;
+  width: 249px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 0 22px;
+}
+#standard_product .right_addcart_side .addtocart_container .quantity_field .quantity {
+  font-size: 12px;
+  color: #999999;
+}
+#standard_product .right_addcart_side .addtocart_container .quantity_field .count_changing_field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#standard_product .right_addcart_side .addtocart_container .quantity_field .count_changing_field span {
+  color: #999999;
+  font-size: 15px;
+}
+#standard_product .right_addcart_side .addtocart_container .quantity_field .count_changing_field span i {
+  font-size: 10px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+#standard_product .right_addcart_side .addtocart_container .quantity_field .count_changing_field span:hover i {
+  color: #f34f3f;
+}
+#standard_product .right_addcart_side .addtocart_container .quantity_field .count_changing_field .count_number {
+  padding-top: 3px;
+}
+#standard_product .right_addcart_side .addtocart_container button {
+  padding: 14px 42px;
+  border: none;
+  background-color: #080808;
+  transition: all 0.25s ease;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.833em;
+  font-weight: 500;
+}
+#standard_product .right_addcart_side .addtocart_container button:hover {
+  background-color: #232323;
+}
+#standard_product .right_addcart_side ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 32px;
+}
+#standard_product .right_addcart_side ul li {
+  font-size: 12px;
+  padding-bottom: 12px;
+  font-weight: 500;
+}
+#standard_product .right_addcart_side ul li span {
+  color: #8b8b8b;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+#standard_product .right_addcart_side ul li span:hover {
+  color: #f34f3f;
+}
+#standard_product .big_buttons {
+  margin: 0 0 0 3px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+#standard_product .big_buttons li {
+  padding: 15px 47px;
+  border: 1px solid #eee;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-bottom: none;
+  cursor: pointer;
+}
+#standard_product .big_buttons .additional_info {
+  border-left: none;
+  border-right: none;
 }
 
 * {
