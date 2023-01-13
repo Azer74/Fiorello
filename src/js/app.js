@@ -250,7 +250,7 @@ const products = {
             sale: "",
         },
     ]
-} 
+}
 
 
 // if (data.length > 0) {
@@ -288,21 +288,21 @@ const products = {
 for (var i of products.data.slice(0, 8)) {
     var col = document.createElement("div");
     col.classList.add(i.section, "col-xl-3", "col-lg-4", "col-md-6", "col-sm-12", "px-4", "hide",)
-    var filterCard=document.createElement("div")
+    var filterCard = document.createElement("div")
     filterCard.classList.add("filter_card")
-    var CardImage=document.createElement("div")
+    var CardImage = document.createElement("div")
     CardImage.classList.add("card_image")
-    var image=document.createElement("img")
+    var image = document.createElement("img")
     image.setAttribute("src", i.images)
-    var BannerSale=document.createElement("span")
+    var BannerSale = document.createElement("span")
     BannerSale.classList.add("sale_banner")
-    BannerSale.innerText=i.sale
-    var BannerSold=document.createElement("span")
+    BannerSale.innerText = i.sale
+    var BannerSold = document.createElement("span")
     BannerSold.classList.add("sold_banner")
-    BannerSold.innerText=i.sold
-    var BannerNew=document.createElement("span")
+    BannerSold.innerText = i.sold
+    var BannerNew = document.createElement("span")
     BannerNew.classList.add("new_banner")
-    BannerNew.innerText=i.new
+    BannerNew.innerText = i.new
     CardImage.appendChild(image)
     CardImage.appendChild(BannerSale)
     CardImage.appendChild(BannerSold)
@@ -310,22 +310,22 @@ for (var i of products.data.slice(0, 8)) {
     filterCard.appendChild(CardImage)
     col.appendChild(filterCard)
 
-    var cardItems= document.createElement("div");
+    var cardItems = document.createElement("div");
     cardItems.classList.add("card_items");
-    var productName= document.createElement("h6");
+    var productName = document.createElement("h6");
     productName.innerText = i.name
-    var productAction=document.createElement("div")
+    var productAction = document.createElement("div")
     productAction.classList.add("card_action")
-    var BtmChange=document.createElement("div")
+    var BtmChange = document.createElement("div")
     BtmChange.classList.add("card_btm_changing")
-    var CardCart=document.createElement("div")
+    var CardCart = document.createElement("div")
     CardCart.classList.add("card_cart")
-    var CartBtn=document.createElement("span")
+    var CartBtn = document.createElement("span")
     CartBtn.innerText = "Add to cart"
-    var CardPrice=document.createElement("div")
+    var CardPrice = document.createElement("div")
     CardPrice.classList.add("card_price")
-    var Price=document.createElement("span")
-    Price.innerText = "$"+ i.price
+    var Price = document.createElement("span")
+    Price.innerText = "$" + i.price
     filterCard.appendChild(cardItems)
     cardItems.appendChild(productName)
     cardItems.appendChild(productAction)
@@ -341,28 +341,28 @@ for (var i of products.data.slice(0, 8)) {
 
 function filterProduct(value) {
     let Buttons = document.querySelectorAll(".button-value")
-    Buttons.forEach((button)=>{
-        if (value.toUpperCase() ==button.innerText.toUpperCase()) {
+    Buttons.forEach((button) => {
+        if (value.toUpperCase() == button.innerText.toUpperCase()) {
             button.classList.add("active");
         }
-        else{
+        else {
             button.classList.remove("active")
         }
     });
     let elements = document.querySelectorAll(".col-xl-3")
-    elements.forEach((element)=>{
-        if (value=="all") {
+    elements.forEach((element) => {
+        if (value == "all") {
             element.classList.remove("hide");
         }
-        else{
+        else {
             if (element.classList.contains(value.toUpperCase())) {
                 element.classList.remove("hide")
             } else {
-              element.classList.add("hide")
+                element.classList.add("hide")
             }
         }
     })
-        
+
 }
 
 window.onload = () => {
@@ -378,9 +378,43 @@ var swiper = new Swiper(".loop_slide", {
         disableOnInteraction: false,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-  });
+});
 
-  
+const Seaction1=document.querySelector(".first_d_none")
+
+// function ButtonBackground(value) {
+    const bigButton1 = document.getElementById("description")
+    const bigButton2 = document.getElementById("additional_info")
+    const bigButton3 = document.getElementById("reviews")
+    if (bigButton1) {
+        bigButton1.addEventListener("click",()=>{
+            bigButton1.classList.add("selected")
+        })
+    } 
+     else {
+        bigButton1.classList.remove("selected")
+    }
+    if (bigButton2) {
+        bigButton2.addEventListener("click",()=>{
+            bigButton2.classList.add("selected")
+        })
+    } 
+     else {
+        bigButton2.classList.remove("selected")
+    }
+    if (bigButton3) {
+        bigButton3.addEventListener("click",()=>{
+            bigButton3.classList.add("selected")
+        })
+    } 
+     else {
+        bigButton3.classList.remove("selected")
+    }
+
+    
+// }
+
+
