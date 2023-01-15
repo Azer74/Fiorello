@@ -14,13 +14,7 @@ body {
                 position: relative;
 
                 #pos_absolute {
-                    font-family: $nineteen_font;
-                    position: absolute;
-                    top: 20%;
-                    left: 13%;
-                    right: 0;
-                    bottom: 0;
-                    z-index: 1;
+                    @include _position($position: absolute, $top: 20%, $left: 13%, $right: 0, $bottom: 0, $f_fam: $nineteen_font, $z-index: 1, );
 
                     .swiper_text {
                         margin: 0 15px;
@@ -31,9 +25,6 @@ body {
                             margin-bottom: 20px;
                             width: 80%;
 
-                            // @media(max-width:1400px){
-                            //    width: 100%;
-                            // }
                             @media(max-width:574px) {
                                 font-size: 39px;
                                 width: 70%;
@@ -54,17 +45,11 @@ body {
                         }
 
                         p {
+                            @include _txt($f_size: 17px, $f_weight: 400, $colors: #6d6a6a, $l_height: 30px, $margin: 0 0 25px 0, $width: 90%, );
                             font-family: $twelwe_font;
-                            line-height: 30px;
-                            font-size: 17px;
-                            color: #6d6a6a;
-                            font-weight: 400;
-                            margin-bottom: 25px;
-                            width: 90%;
 
                             @media(max-width:1400px) {
                                 width: 100%;
-                                ;
                             }
 
                             @media(max-width: 480px) {
@@ -122,6 +107,7 @@ body {
                             animation: move 40s ease;
                             position: absolute;
                         }
+
                         @keyframes move {
                             0% {
                                 transform-origin: center center;
@@ -297,19 +283,12 @@ body {
                 }
 
                 .filter_popup {
-                    position: absolute;
-                    opacity: 0;
-                    top: 25px;
-                    right: -8px;
+                    @include _position($position: absolute, $top: 25px, $right: -8px, $colors: #737373, $b_color: #fff, $width: 424px, $padding: 13px 30px 17px, $z-index: -1, );
                     display: flex;
                     gap: 30px;
-                    color: #737373;
-                    background-color: #fff;
                     text-align: left;
-                    padding: 13px 30px 17px;
-                    width: 424px;
                     transition: all .25s ease;
-                    z-index: -1;
+                    opacity: 0;
 
                     @media(max-width: 480px) {
                         width: 260px;
@@ -631,20 +610,24 @@ body {
                 transform: none;
                 max-width: 920px;
                 max-height: 517px;
-                @media(max-width:1024px){
+
+                @media(max-width:1024px) {
                     width: 640px;
                     height: 360px;
                 }
-                @media(max-width:768px){
+
+                @media(max-width:768px) {
                     width: 560px;
                     height: 315px;
                 }
-                @media(max-width:680px){
+
+                @media(max-width:680px) {
                     width: 290px;
                     height: 163px;
                 }
-                @media(max-width:576px){
-                   margin: 0 auto;  
+
+                @media(max-width:576px) {
+                    margin: 0 auto;
                 }
 
                 .modal-content {
@@ -656,19 +639,22 @@ body {
                         width: 920px;
                         height: 517px;
                         padding: 0;
-                        @media(max-width:1024px){
+
+                        @media(max-width:1024px) {
                             width: 640px;
                             height: 360px;
                         }
-                        @media(max-width:768px){
+
+                        @media(max-width:768px) {
                             width: 560px;
                             height: 315px;
                         }
-                        @media(max-width:680px){
+
+                        @media(max-width:680px) {
                             width: 290px;
                             height: 163px;
                         }
-                        
+
 
                         .video-frame {
                             width: 100%;
@@ -678,15 +664,18 @@ body {
                             iframe {
                                 width: 920px;
                                 height: 517px;
-                                @media(max-width:1024px){
+
+                                @media(max-width:1024px) {
                                     width: 640px;
                                     height: 360px;
                                 }
-                                @media(max-width:768px){
+
+                                @media(max-width:768px) {
                                     width: 560px;
                                     height: 315px;
                                 }
-                                @media(max-width:680px){
+
+                                @media(max-width:680px) {
                                     width: 290px;
                                     height: 163px;
                                 }
@@ -1057,7 +1046,8 @@ body {
         transition: .3s ease-in-out;
         text-align: center;
         line-height: 48px;
-        iconify-icon{
+
+        iconify-icon {
             font-size: 20px;
         }
 
