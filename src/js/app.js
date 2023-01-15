@@ -117,142 +117,155 @@ if (Categories) {
     })
 }
 
-const products = {
-    data: [
-        {
-            name: "MAJESTY PALM",
-            section: "CACTUSES",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "FOXGLOVE FLOWER",
-            section: "POPULAR",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-13-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "SWEET ALYSSUM",
-            section: "WINTER",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
-            new: "",
-            sold: "Sold",
-            sale: "",
-        },
-        {
-            name: "SPRING SNOWFLAKE",
-            section: "VARIOUS",
-            price: "170",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-11-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "SCARLET SAGE",
-            section: "EXOTIC",
-            price: "159",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-12-img.jpg",
-            new: "",
-            sold: "",
-            sale: "Sale",
-        },
-        {
-            name: "ROCK SOAPWORT",
-            section: "CACTUSES",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-9-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "SUMMER SAVORY",
-            section: "GREENS",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-8-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "WILD ROSES",
-            section: "EXOTIC",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-7-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "CACTUS IN ORANGE",
-            section: "CACTUSES",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-3-img.jpg",
-            new: "",
-            sold: "Sold",
-            sale: "",
-        },
-        {
-            name: "WILD CACTUS",
-            section: "CACTUSES",
-            price: "159",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-5-img.jpg",
-            new: "",
-            sold: "",
-            sale: "Sale",
-        },
-        {
-            name: "COLORFUL TULIPS",
-            section: "EXOTIC",
-            price: "350",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-6-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "PINK FLOWER TREE",
-            section: "EXOTIC",
-            price: "180",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-4-img.jpg",
-            new: "",
-            sold: "",
-            sale: "",
-        },
-        {
-            name: "SCHEFFLERA",
-            section: "EXOTIC",
-            price: "259",
-            images:
-                "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
-            new: "New",
-            sold: "",
-            sale: "",
-        },
-    ]
-}
-
-
+const products = [
+    {
+        id: 0,
+        name: "MAJESTY PALM",
+        section: "CACTUSES",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 1,
+        name: "FOXGLOVE FLOWER",
+        section: "POPULAR",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-13-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 3,
+        name: "SWEET ALYSSUM",
+        section: "WINTER",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
+        new: "",
+        sold: "Sold",
+        sale: "",
+    },
+    {
+        id: 4,
+        name: "SPRING SNOWFLAKE",
+        section: "VARIOUS",
+        price: "170",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-11-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 5,
+        name: "SCARLET SAGE",
+        section: "EXOTIC",
+        price: "159",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-12-img.jpg",
+        new: "",
+        sold: "",
+        sale: "Sale",
+    },
+    {
+        id: 6,
+        name: "ROCK SOAPWORT",
+        section: "CACTUSES",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-9-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 7,
+        name: "SUMMER SAVORY",
+        section: "GREENS",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-8-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 8,
+        name: "WILD ROSES",
+        section: "EXOTIC",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-7-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 9,
+        name: "CACTUS IN ORANGE",
+        section: "CACTUSES",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-3-img.jpg",
+        new: "",
+        sold: "Sold",
+        sale: "",
+    },
+    {
+        id: 10,
+        name: "WILD CACTUS",
+        section: "CACTUSES",
+        price: "159",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-5-img.jpg",
+        new: "",
+        sold: "",
+        sale: "Sale",
+    },
+    {
+        id: 11,
+        name: "COLORFUL TULIPS",
+        section: "EXOTIC",
+        price: "350",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-6-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 12,
+        name: "PINK FLOWER TREE",
+        section: "EXOTIC",
+        price: "180",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-4-img.jpg",
+        new: "",
+        sold: "",
+        sale: "",
+    },
+    {
+        id: 13,
+        name: "SCHEFFLERA",
+        section: "EXOTIC",
+        price: "259",
+        images:
+            "https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
+        new: "New",
+        sold: "",
+        sale: "",
+    },
+]
+const CartAddPlace = document.getElementById("cart_adding_place")
+const subtotal=document.querySelector(".total_sum_self")
+const subtotalNav=document.querySelector(".total_products_nav")
+const RedCartBanner=document.querySelector(".red_cart_banner")
 // if (data.length > 0) {
 //     data.slice(0, 8).map((element, index) => {
 //         const Row = document.getElementById("map_row")
@@ -285,7 +298,7 @@ const products = {
 //     })
 // }
 
-for (var i of products.data.slice(0, 8)) {
+for (var i of products.slice(0, 8)) {
     var col = document.createElement("div");
     col.classList.add(i.section, "col-xl-3", "col-lg-4", "col-md-6", "col-sm-12", "px-4", "hide",)
     var filterCard = document.createElement("div")
@@ -336,10 +349,102 @@ for (var i of products.data.slice(0, 8)) {
     CardPrice.appendChild(Price)
 
 
-    const Row=document.getElementById("map_row")
-    if (Row) {
-        Row.appendChild(col)
+    document.getElementById("map_row").appendChild(col)
+    CartBtn.setAttribute("onclick", "AddToCart(id)");
+    CartBtn.setAttribute("id", i.id);
+
+    //CartBtn.onclick = function() { AddToCart(i.id) };
+
+}
+
+
+let cart = JSON.parse(localStorage.getItem("CART")) || []
+updateCart()
+
+function AddToCart(id) {
+    if (cart.some((item) => item.id == id)) {
+       ChangeNumberOfUnits("plus", id)
+    } else {
+        const item = products.find((product) => product.id == id)
+        cart.push({
+            ...item,
+            numberOfUnits: 1,
+        })
     }
+    updateCart()
+}
+
+function updateCart() {
+    renderCartItems();
+    renderSubtotal();
+
+    //save cart to Local Storage
+    localStorage.setItem("CART", JSON.stringify(cart))
+}
+
+
+function renderSubtotal(){
+    let totalPrice = 0, totalItems = 0;
+    cart.forEach((item)=>{
+        totalPrice += item.price * item.numberOfUnits;
+        totalItems += item.numberOfUnits
+    })
+    subtotalNav.innerHTML =`CART ($${totalPrice})`
+    subtotal.innerHTML = `$${totalPrice}`
+    RedCartBanner.innerHTML = totalItems
+}
+
+
+function renderCartItems() {
+    CartAddPlace.innerHTML ="",
+    cart.forEach((item) => {
+        CartAddPlace.innerHTML += `
+        <li class="empty_cart_card">
+          <div class="image_holder">
+            <img src="${item.images}" alt="${item.name}">
+          </div>
+          <div class="card_info_holder">
+            <h6>${item.name}</h6>
+            <div class="card_numbers">
+                <div class="count_changing">
+                  <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
+                  <span class="product_count">${item.numberOfUnits}</span>
+                  <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
+                </div>
+                <span class="mini_product_price"><small>$</small>${item.price}</span>
+            </div>              
+          </div>
+          <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
+             <i class="fa-solid fa-xmark"></i>
+          </div>
+        </li>
+        `
+    })
+}
+
+function removeItemFromCart(id){
+    cart = cart.filter((item)=> item.id !== id )
+    updateCart()
+}
+
+function ChangeNumberOfUnits(action, id) {
+    cart = cart.map((item)=>{
+
+    let numberOfUnits = item.numberOfUnits
+     if (item.id == id) {
+        if (action === "minus" && numberOfUnits>1) {
+            numberOfUnits--
+        } else if (action ==="plus") {
+            numberOfUnits++
+        } 
+     }
+      return {
+        ...item,
+        numberOfUnits,
+      }
+    })
+
+    updateCart()
 }
 
 
@@ -373,6 +478,7 @@ window.onload = () => {
     filterProduct("all")
 };
 
+
 var swiper = new Swiper(".loop_slide", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -387,50 +493,5 @@ var swiper = new Swiper(".loop_slide", {
     },
 });
 
-
-const bigButton1 = document.getElementById("description")
-const bigButton2 = document.getElementById("additional_info")
-const bigButton3 = document.getElementById("reviews")
-const Dnone1 = document.querySelector(".first_d_none")
-const Dnone2 = document.querySelector(".second_d_none")
-const Dnone3 = document.querySelector(".third_d_none")
-if (bigButton1) {
-    bigButton1.addEventListener("click", () => {
-        Dnone1.style.display = "block"
-        Dnone2.style.display = "none"
-        Dnone3.style.display = "none"
-        bigButton1.classList.add("selected")
-        bigButton2.classList.remove("selected")
-        bigButton3.classList.remove("selected")
-    })
-    
-}
-if (bigButton2) {
-    bigButton2.addEventListener("click", () => {
-        Dnone1.style.display = "none"
-        Dnone2.style.display = "flex"
-        Dnone3.style.display = "none"
-        bigButton2.classList.add("selected")
-        bigButton3.classList.remove("selected")
-        bigButton1.classList.remove("selected")
-    })
-}
-if (bigButton3) {
-    bigButton3.addEventListener("click", () => {
-        Dnone1.style.display = "none"
-        Dnone2.style.display = "none"
-        Dnone3.style.display = "block"
-        bigButton3.classList.add("selected")
-        bigButton2.classList.remove("selected")
-        bigButton1.classList.remove("selected")
-    })
-}
-
-window.onload = () => {
-    Dnone1.style.display = "block"
-    bigButton1.classList.add("selected")
-};
-
-    
 
 

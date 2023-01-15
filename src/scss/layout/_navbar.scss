@@ -500,17 +500,119 @@ body {
                         transition: opacity .2s, max-height 0s linear .15s;
 
                         ul {
-                            margin: 23px 20px;
+                            margin: 23px 20px 0;
                             padding: 0;
-
-                            .empty_cart {
-                                color: #737373;
-                                font-size: 13px;
-                                font-weight: 500;
+                            display: flex;
+                            flex-direction: column;
+                             
+                            .empty_text{
+                               display: none;
+                            }
+                            .empty_cart_card {
+                                // color: #737373;
+                                font-size: 12px;
+                                // font-weight: 500;
                                 font-family: Montserrat, sans-serif;
                                 height: 100%;
                                 width: 100%;
+                                padding: 0 0 15px 0;
+                                display: flex;
+                                .image_holder{
+                                    width: 50px;
+                                    height: 66px;
+                                    img{
+                                      width: 50px;
+                                      height: 66px;
+                                      object-fit: contain;
+                                    }
+                                }
+                                .card_info_holder{
+                                    padding: 0 19px;
+                                    height: 66px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    h6{
+                                        font-size: 12px;
+                                        letter-spacing: 1px;
+                                        margin-bottom: 10px;
+                                    }
+                                    .card_numbers{
+                                        color: #afafaf;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 7px;
+                                        .count_changing{
+                                            display: flex;
+                                            span{
+                                                padding: 0px 5px;
+                                                border-top: 1px solid #e8e8e8;
+                                                border-bottom: 1px solid #e8e8e8;
+                                            }
+                                            .product_count{
+                                                border: none;
+                                                padding: 2px 5px;
+                                            }
+                                        }
+                                        .mini_product_price{
+                                            margin-left: 5px;
+                                            small{
+                                                font-size: 12px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .cart_remover{
+                                    i{
+                                        font-size: 10px;
+                                        color: #f34f3f;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .cart_place_bottom{
+                            margin: 0px 20px 23px 20px;
+                            .cart_total_sum{
+                                padding: 0 0 15px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                .left_txt{
+                                  font-weight: 700;
+                                  font-size: 12px;
+                                }
+                                .right_count{
+                                    span{
+                                        font-size: 12px;
+                                        color: #2b2b2b;
+                                        width: 100px;
+                                        text-align: end;
+                                    }
+                                }
+                            }
+                            .space_action{
                                 padding: 0;
+                                display: flex;
+                                justify-content: space-between;
+                                button{
+                                    border: none;
+                                    background-color: #f34f3f;
+                                    color: white;
+                                    width: 48%;
+                                    font-size: 9px;
+                                    letter-spacing: 1px;
+                                    font-weight: 600;
+                                    padding: 13px 5px;
+                                    transition: .3s ease-in-out;
+                                    &:hover{
+                                        background-color: #ff3d2a;
+                                    }
+                                }
+                                .checkout_btn{
+                                    background-color: #1b1b1b;
+                                    &:hover{
+                                        background-color: #1b1b1b;
+                                    }
+                                }
                             }
                         }
                     }

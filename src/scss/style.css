@@ -498,18 +498,135 @@ body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown {
 }
 html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul,
 body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul {
-  margin: 23px 20px;
+  margin: 23px 20px 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
-html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart,
-body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart {
-  color: #737373;
-  font-size: 13px;
-  font-weight: 500;
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_text,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_text {
+  display: none;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card {
+  font-size: 12px;
   font-family: Montserrat, sans-serif;
   height: 100%;
   width: 100%;
+  padding: 0 0 15px 0;
+  display: flex;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .image_holder,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .image_holder {
+  width: 50px;
+  height: 66px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .image_holder img,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .image_holder img {
+  width: 50px;
+  height: 66px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder {
+  padding: 0 19px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder h6,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder h6 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers {
+  color: #afafaf;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .count_changing,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .count_changing {
+  display: flex;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .count_changing span,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .count_changing span {
+  padding: 0px 5px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .count_changing .product_count,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .count_changing .product_count {
+  border: none;
+  padding: 2px 5px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .mini_product_price,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .mini_product_price {
+  margin-left: 5px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .mini_product_price small,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .card_info_holder .card_numbers .mini_product_price small {
+  font-size: 12px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .cart_remover i,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown ul .empty_cart_card .cart_remover i {
+  font-size: 10px;
+  color: #f34f3f;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom {
+  margin: 0px 20px 23px 20px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .cart_total_sum,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .cart_total_sum {
+  padding: 0 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .cart_total_sum .left_txt,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .cart_total_sum .left_txt {
+  font-weight: 700;
+  font-size: 12px;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .cart_total_sum .right_count span,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .cart_total_sum .right_count span {
+  font-size: 12px;
+  color: #2b2b2b;
+  width: 100px;
+  text-align: end;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action {
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action button,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action button {
+  border: none;
+  background-color: #f34f3f;
+  color: white;
+  width: 48%;
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 13px 5px;
+  transition: 0.3s ease-in-out;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action button:hover,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action button:hover {
+  background-color: #ff3d2a;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action .checkout_btn,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action .checkout_btn {
+  background-color: #1b1b1b;
+}
+html #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action .checkout_btn:hover,
+body #desktop_nav .right_desk_nav .nav_action .my_cart .shopping_cart_dropdown .cart_place_bottom .space_action .checkout_btn:hover {
+  background-color: #1b1b1b;
 }
 html #desktop_nav .right_desk_nav .nav_action .my_cart:hover .shopping_cart_dropdown,
 body #desktop_nav .right_desk_nav .nav_action .my_cart:hover .shopping_cart_dropdown {
