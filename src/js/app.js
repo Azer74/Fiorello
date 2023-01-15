@@ -262,6 +262,7 @@ const products = [
         sale: "",
     },
 ]
+
 const CartAddPlace = document.getElementById("cart_adding_place")
 const subtotal=document.querySelector(".total_sum_self")
 const subtotalNav=document.querySelector(".total_products_nav")
@@ -348,8 +349,11 @@ for (var i of products.slice(0, 8)) {
     BtmChange.appendChild(CardPrice)
     CardPrice.appendChild(Price)
 
-
-    document.getElementById("map_row").appendChild(col)
+    
+   const Row= document.getElementById("map_row")
+   if (Row) {
+    Row.appendChild(col)
+   }
     CartBtn.setAttribute("onclick", "AddToCart(id)");
     CartBtn.setAttribute("id", i.id);
 
@@ -389,16 +393,25 @@ function renderSubtotal(){
         totalPrice += item.price * item.numberOfUnits;
         totalItems += item.numberOfUnits
     })
-    subtotalNav.innerHTML =`CART ($${totalPrice})`
-    subtotal.innerHTML = `$${totalPrice}`
-    RedCartBanner.innerHTML = totalItems
+    if (subtotalNav) {
+        subtotalNav.innerHTML =`CART ($${totalPrice})`
+    }
+    if (subtotal) {
+        subtotal.innerHTML = `$${totalPrice}`
+    }
+    if (RedCartBanner) {
+        RedCartBanner.innerHTML = totalItems
+    }
 }
 
 
 function renderCartItems() {
-    CartAddPlace.innerHTML ="",
+    if (CartAddPlace) {
+        CartAddPlace.innerHTML ="";
+    }
     cart.forEach((item) => {
-        CartAddPlace.innerHTML += `
+        if (CartAddPlace) {
+            CartAddPlace.innerHTML += `
         <li class="empty_cart_card">
           <div class="image_holder">
             <img src="${item.images}" alt="${item.name}">
@@ -419,6 +432,7 @@ function renderCartItems() {
           </div>
         </li>
         `
+        }
     })
 }
 
@@ -491,6 +505,14 @@ var swiper = new Swiper(".loop_slide", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+const SelectSorting=document.querySelector(".select_heading")
+if(SelectSorting){
+    SelectSorting.addEventListener("click",()=>{
+        document.querySelector(".sorting_popup_dnone").classList.toggle("hiding")
+    })
+}
+
 
 
 

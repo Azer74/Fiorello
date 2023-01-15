@@ -697,10 +697,26 @@
                                     <iconify-icon icon="material-symbols:shopping-bag-outline-sharp"></iconify-icon>
                                     <span class="red_cart_banner">0</span>
                                 </div>
-                                <p>CART ($0)</p>
+                                <p class="total_products_nav">CART ($0)</p>
                                 <div class="shopping_cart_dropdown">
-                                    <ul>
-                                        <li class="empty_cart">No products in the cart.</li>
+                                    <ul id="cart_adding_place">
+                                       <li class="empty_text">
+                                         No products in the cart.
+                                       </li>
+                                    </ul>
+                                    <ul class="cart_place_bottom">
+                                        <li class="cart_total_sum">
+                                            <div class="left_txt">
+                                                TOTAL : 
+                                            </div>
+                                            <div class="right_count">
+                                                <span class="total_sum_self">$0</span> 
+                                            </div>
+                                        </li>
+                                        <li class="space_action">
+                                            <button>VIEW CART</button>
+                                            <button class="checkout_btn">CHECKOUT</button>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -831,12 +847,12 @@
                             <div class="prod_categories">
                                 <h6>CATEGORIES</h6>
                                 <ul>
-                                    <li>CACTUSES</li>
-                                    <li>EXOTIC</li>
-                                    <li>GREENS</li>
-                                    <li>POPULAR</li>
-                                    <li>VARIOUS</li>
-                                    <li>WINTER</li>
+                                    <li class="button-value1" onclick="filterProductPage('cactuses')">Cactuses</li>
+                                    <li class="button-value1" onclick="filterProductPage('exotic')">Exotic</li>
+                                    <li class="button-value1" onclick="filterProductPage('greens')">Greens</li>
+                                    <li class="button-value1" onclick="filterProductPage('popular')">Popular</li>
+                                    <li class="button-value1" onclick="filterProductPage('various')">Various</li>
+                                    <li class="button-value1" onclick="filterProductPage('winter')">Winter</li>
                                 </ul>
                             </div>
                             <div class="recently_viewed">
@@ -859,6 +875,43 @@
                                 <div class="slider_info">
                                     <small>Price: $150 — $350</small>
                                     <a href="#">FILTER</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="row px-2 mb-4 align-items-center">
+                            <div class="col-xl-6 px-3">
+                                <p>Showing 1–9 of 14 results</p>
+                            </div>
+                            <div class="col-xl-6 px-3">
+                                <div class="serpen_sortia">
+                                    <div class="select_option">
+                                        <div class="select_heading">
+                                            <h5>Sort by popularity</h5>
+                                            <i class="bi bi-caret-down-fill"></i>
+                                        </div>
+                                        <div class="sorting_popup_dnone">
+                                            <ul>
+                                                <li>Sort by popularity</li>
+                                                <li>Sort by latest</li>
+                                                <li>Sort by price: low to high</li>
+                                                <li>Sort by price: high to low</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="map_row_list">
+
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-xl-12">
+                                <div class="pagination_numbers">
+                                   <span class="first_page">1</span>
+                                   <span class="second_page">2</span>
+                                   <span class="next_page"><i class="bi bi-chevron-right"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -963,6 +1016,7 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
     <script src="../src/js/app.js"></script>
+    <script src="../src/js/product.js"></script>
 </body>
 
 </html>
