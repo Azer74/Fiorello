@@ -1,3 +1,17 @@
+// window.addEventListener("scroll", function(){
+//     var header = document.querySelector("#desktop_nav")
+//     header.classList.toggle("sticky", window.scrollY>0)
+    
+// })
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+  }
+
 const openBtn = document.querySelector(".open-menu")
 const openItems = document.querySelector("#menu-body")
 
@@ -407,32 +421,32 @@ function renderSubtotal() {
 function renderCartItems() {
     if (CartAddPlace) {
         CartAddPlace.innerHTML = "";
+        cart.forEach((item) => {
+            if (CartAddPlace) {
+                CartAddPlace.innerHTML += `
+                <li class="empty_cart_card">
+                  <div class="image_holder">
+                    <img src="${item.images}" alt="${item.name}">
+                  </div>
+                  <div class="card_info_holder">
+                    <h6>${item.name}</h6>
+                    <div class="card_numbers">
+                        <div class="count_changing">
+                          <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
+                          <span class="product_count">${item.numberOfUnits}</span>
+                          <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
+                        </div>
+                        <span class="mini_product_price"><small>$</small>${item.price}</span>
+                    </div>              
+                  </div>
+                  <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
+                     <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </li>
+                `
+            }
+        })
     }
-    cart.forEach((item) => {
-        if (CartAddPlace) {
-            CartAddPlace.innerHTML += `
-            <li class="empty_cart_card">
-              <div class="image_holder">
-                <img src="${item.images}" alt="${item.name}">
-              </div>
-              <div class="card_info_holder">
-                <h6>${item.name}</h6>
-                <div class="card_numbers">
-                    <div class="count_changing">
-                      <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
-                      <span class="product_count">${item.numberOfUnits}</span>
-                      <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
-                    </div>
-                    <span class="mini_product_price"><small>$</small>${item.price}</span>
-                </div>              
-              </div>
-              <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
-                 <i class="fa-solid fa-xmark"></i>
-              </div>
-            </li>
-            `
-        }
-    })
 }
 
 function removeItemFromCart(id) {
@@ -505,5 +519,18 @@ var swiper = new Swiper(".loop_slide", {
     },
 });
 
+const mybutton = document.querySelector(".taptotop");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.visibility = "visible";
+    mybutton.style.opacity = "1";
+} else {
+    mybutton.style.visibility = "hidden";
+    mybutton.style.opacity = "0";
+  }
+}
 
 

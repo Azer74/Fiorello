@@ -1068,6 +1068,37 @@ body main #slider_background .swiper .swiper-slide .slider_image img {
        object-position: center;
   }
 }
+body main #slider_background .swiper .swiper-slide .kenburneseffect {
+  width: 100%;
+  height: 65vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+body main #slider_background .swiper .swiper-slide .kenburneseffect img {
+  width: 100%;
+  -webkit-animation: move 40s ease;
+          animation: move 40s ease;
+  position: absolute;
+}
+@-webkit-keyframes move {
+  0% {
+    transform-origin: center center;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes move {
+  0% {
+    transform-origin: center center;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
 body main #slider_background .swiper .swiper-button-next {
   padding-right: 40px;
 }
@@ -1486,6 +1517,29 @@ body main #exampleModal .modal-dialog {
   max-width: 920px;
   max-height: 517px;
 }
+@media (max-width: 1024px) {
+  body main #exampleModal .modal-dialog {
+    width: 640px;
+    height: 360px;
+  }
+}
+@media (max-width: 768px) {
+  body main #exampleModal .modal-dialog {
+    width: 560px;
+    height: 315px;
+  }
+}
+@media (max-width: 680px) {
+  body main #exampleModal .modal-dialog {
+    width: 290px;
+    height: 163px;
+  }
+}
+@media (max-width: 576px) {
+  body main #exampleModal .modal-dialog {
+    margin: 0 auto;
+  }
+}
 body main #exampleModal .modal-dialog .modal-content {
   border: none;
   border-radius: none;
@@ -1496,6 +1550,24 @@ body main #exampleModal .modal-dialog .modal-content .modal-body {
   height: 517px;
   padding: 0;
 }
+@media (max-width: 1024px) {
+  body main #exampleModal .modal-dialog .modal-content .modal-body {
+    width: 640px;
+    height: 360px;
+  }
+}
+@media (max-width: 768px) {
+  body main #exampleModal .modal-dialog .modal-content .modal-body {
+    width: 560px;
+    height: 315px;
+  }
+}
+@media (max-width: 680px) {
+  body main #exampleModal .modal-dialog .modal-content .modal-body {
+    width: 290px;
+    height: 163px;
+  }
+}
 body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame {
   width: 100%;
   height: 100%;
@@ -1504,6 +1576,24 @@ body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame {
 body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame iframe {
   width: 920px;
   height: 517px;
+}
+@media (max-width: 1024px) {
+  body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame iframe {
+    width: 640px;
+    height: 360px;
+  }
+}
+@media (max-width: 768px) {
+  body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
+@media (max-width: 680px) {
+  body main #exampleModal .modal-dialog .modal-content .modal-body .video-frame iframe {
+    width: 290px;
+    height: 163px;
+  }
 }
 body main #florists {
   padding: 120px 0 70px 0;
@@ -1808,6 +1898,28 @@ body main #loop_swiper .swiper .swiper-button-prev img {
 }
 body main #loop_swiper .swiper .swiper-button-prev::after {
   display: none;
+}
+body .taptotop {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 41px;
+  height: 41px;
+  right: 25px;
+  bottom: 25px;
+  margin: 0;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #f34f3f;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  line-height: 48px;
+}
+body .taptotop iconify-icon {
+  font-size: 20px;
 }
 
 * {
