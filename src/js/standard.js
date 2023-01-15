@@ -31,3 +31,46 @@ if (products.length > 0) {
     }
     })
 }
+
+const bigButton1 = document.getElementById("description")
+const bigButton2 = document.getElementById("additional_info")
+const bigButton3 = document.getElementById("reviews")
+const Dnone1 = document.querySelector(".first_d_none")
+const Dnone2 = document.querySelector(".second_d_none")
+const Dnone3 = document.querySelector(".third_d_none")
+if (bigButton1) {
+    bigButton1.addEventListener("click", () => {
+        Dnone1.style.display = "block"
+        Dnone2.style.display = "none"
+        Dnone3.style.display = "none"
+        bigButton1.classList.add("selected")
+        bigButton2.classList.remove("selected")
+        bigButton3.classList.remove("selected")
+    })
+
+}
+if (bigButton2) {
+    bigButton2.addEventListener("click", () => {
+        Dnone1.style.display = "none"
+        Dnone2.style.display = "flex"
+        Dnone3.style.display = "none"
+        bigButton2.classList.add("selected")
+        bigButton3.classList.remove("selected")
+        bigButton1.classList.remove("selected")
+    })
+}
+if (bigButton3) {
+    bigButton3.addEventListener("click", () => {
+        Dnone1.style.display = "none"
+        Dnone2.style.display = "none"
+        Dnone3.style.display = "block"
+        bigButton3.classList.add("selected")
+        bigButton2.classList.remove("selected")
+        bigButton1.classList.remove("selected")
+    })
+}
+
+window.onload = () => {
+    Dnone1.style.display = "block"
+    bigButton1.classList.add("selected")
+};
