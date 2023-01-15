@@ -263,9 +263,9 @@ const products = [
     },
 ]
 const CartAddPlace = document.getElementById("cart_adding_place")
-const subtotal=document.querySelector(".total_sum_self")
-const subtotalNav=document.querySelector(".total_products_nav")
-const RedCartBanner=document.querySelector(".red_cart_banner")
+const subtotal = document.querySelector(".total_sum_self")
+const subtotalNav = document.querySelector(".total_products_nav")
+const RedCartBanner = document.querySelector(".red_cart_banner")
 // if (data.length > 0) {
 //     data.slice(0, 8).map((element, index) => {
 //         const Row = document.getElementById("map_row")
@@ -349,7 +349,10 @@ for (var i of products.slice(0, 8)) {
     CardPrice.appendChild(Price)
 
 
-    document.getElementById("map_row").appendChild(col)
+    const Row = document.getElementById("map_row")
+    if (Row) {
+        Row.appendChild(col)
+    }
     CartBtn.setAttribute("onclick", "AddToCart(id)");
     CartBtn.setAttribute("id", i.id);
 
@@ -363,7 +366,7 @@ updateCart()
 
 function AddToCart(id) {
     if (cart.some((item) => item.id == id)) {
-       ChangeNumberOfUnits("plus", id)
+        ChangeNumberOfUnits("plus", id)
     } else {
         const item = products.find((product) => product.id == id)
         cart.push({
@@ -383,65 +386,75 @@ function updateCart() {
 }
 
 
-function renderSubtotal(){
+function renderSubtotal() {
     let totalPrice = 0, totalItems = 0;
-    cart.forEach((item)=>{
+    cart.forEach((item) => {
         totalPrice += item.price * item.numberOfUnits;
         totalItems += item.numberOfUnits
     })
-    subtotalNav.innerHTML =`CART ($${totalPrice})`
-    subtotal.innerHTML = `$${totalPrice}`
-    RedCartBanner.innerHTML = totalItems
+    if (subtotalNav) {
+        subtotalNav.innerHTML = `CART ($${totalPrice})`
+    }
+    if (subtotal) {
+        subtotal.innerHTML = `$${totalPrice}`
+    }
+    if (RedCartBanner) {
+        RedCartBanner.innerHTML = totalItems
+    }
 }
 
 
 function renderCartItems() {
-    CartAddPlace.innerHTML ="",
+    if (CartAddPlace) {
+        CartAddPlace.innerHTML = "";
+    }
     cart.forEach((item) => {
-        CartAddPlace.innerHTML += `
-        <li class="empty_cart_card">
-          <div class="image_holder">
-            <img src="${item.images}" alt="${item.name}">
-          </div>
-          <div class="card_info_holder">
-            <h6>${item.name}</h6>
-            <div class="card_numbers">
-                <div class="count_changing">
-                  <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
-                  <span class="product_count">${item.numberOfUnits}</span>
-                  <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
-                </div>
-                <span class="mini_product_price"><small>$</small>${item.price}</span>
-            </div>              
-          </div>
-          <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
-             <i class="fa-solid fa-xmark"></i>
-          </div>
-        </li>
-        `
+        if (CartAddPlace) {
+            CartAddPlace.innerHTML += `
+            <li class="empty_cart_card">
+              <div class="image_holder">
+                <img src="${item.images}" alt="${item.name}">
+              </div>
+              <div class="card_info_holder">
+                <h6>${item.name}</h6>
+                <div class="card_numbers">
+                    <div class="count_changing">
+                      <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
+                      <span class="product_count">${item.numberOfUnits}</span>
+                      <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
+                    </div>
+                    <span class="mini_product_price"><small>$</small>${item.price}</span>
+                </div>              
+              </div>
+              <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
+                 <i class="fa-solid fa-xmark"></i>
+              </div>
+            </li>
+            `
+        }
     })
 }
 
-function removeItemFromCart(id){
-    cart = cart.filter((item)=> item.id !== id )
+function removeItemFromCart(id) {
+    cart = cart.filter((item) => item.id !== id)
     updateCart()
 }
 
 function ChangeNumberOfUnits(action, id) {
-    cart = cart.map((item)=>{
+    cart = cart.map((item) => {
 
-    let numberOfUnits = item.numberOfUnits
-     if (item.id == id) {
-        if (action === "minus" && numberOfUnits>1) {
-            numberOfUnits--
-        } else if (action ==="plus") {
-            numberOfUnits++
-        } 
-     }
-      return {
-        ...item,
-        numberOfUnits,
-      }
+        let numberOfUnits = item.numberOfUnits
+        if (item.id == id) {
+            if (action === "minus" && numberOfUnits > 1) {
+                numberOfUnits--
+            } else if (action === "plus") {
+                numberOfUnits++
+            }
+        }
+        return {
+            ...item,
+            numberOfUnits,
+        }
     })
 
     updateCart()
