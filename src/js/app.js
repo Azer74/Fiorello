@@ -342,62 +342,6 @@ for (var i of products.data.slice(0, 8)) {
     }
 }
 
-for (var i of products.data.slice(0, 4)) {
-    var col = document.createElement("div");
-    col.classList.add(i.section, "col-xl-3", "col-lg-4", "col-md-6", "col-sm-12", "px-4", "hide",)
-    var filterCard = document.createElement("div")
-    filterCard.classList.add("filter_card")
-    var CardImage = document.createElement("div")
-    CardImage.classList.add("card_image")
-    var image = document.createElement("img")
-    image.setAttribute("src", i.images)
-    var BannerSale = document.createElement("span")
-    BannerSale.classList.add("sale_banner")
-    BannerSale.innerText = i.sale
-    var BannerSold = document.createElement("span")
-    BannerSold.classList.add("sold_banner")
-    BannerSold.innerText = i.sold
-    var BannerNew = document.createElement("span")
-    BannerNew.classList.add("new_banner")
-    BannerNew.innerText = i.new
-    CardImage.appendChild(image)
-    CardImage.appendChild(BannerSale)
-    CardImage.appendChild(BannerSold)
-    CardImage.appendChild(BannerNew)
-    filterCard.appendChild(CardImage)
-    col.appendChild(filterCard)
-
-    var cardItems = document.createElement("div");
-    cardItems.classList.add("card_items");
-    var productName = document.createElement("h6");
-    productName.innerText = i.name
-    var productAction = document.createElement("div")
-    productAction.classList.add("card_action")
-    var BtmChange = document.createElement("div")
-    BtmChange.classList.add("card_btm_changing")
-    var CardCart = document.createElement("div")
-    CardCart.classList.add("card_cart")
-    var CartBtn = document.createElement("span")
-    CartBtn.innerText = "Add to cart"
-    var CardPrice = document.createElement("div")
-    CardPrice.classList.add("card_price")
-    var Price = document.createElement("span")
-    Price.innerText = "$" + i.price
-    filterCard.appendChild(cardItems)
-    cardItems.appendChild(productName)
-    cardItems.appendChild(productAction)
-    productAction.appendChild(BtmChange)
-    BtmChange.appendChild(CardCart)
-    CardCart.appendChild(CartBtn)
-    BtmChange.appendChild(CardPrice)
-    CardPrice.appendChild(Price)
-
-
-    const Row2=document.getElementById("map_row_standard")
-    if (Row2) {
-        Row2.appendChild(col)
-    }
-}
 
 function filterProduct(value) {
     let Buttons = document.querySelectorAll(".button-value")
