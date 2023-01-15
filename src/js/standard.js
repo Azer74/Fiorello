@@ -16,7 +16,7 @@ if (products.length > 0) {
                 <div class="card_action">
                     <div class="card_btm_changing">
                         <div class="card_cart">
-                            <span>Add to cart</span>
+                            <span onclick="AddToCart(id)">Add to cart</span>
                         </div>
                         <div class="card_price">
                             <span><small>$</small>${element.price}</span>
