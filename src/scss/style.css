@@ -1817,11 +1817,21 @@ main #grey_space {
   background-color: #fafaf9;
   padding: 60px 0;
 }
+@media (max-width: 1024px) {
+  main #grey_space .grey_space_text {
+    margin-left: 30px;
+  }
+}
 main #grey_space .grey_space_text h2 {
   font-size: 50px;
   font-family: "Playfair Display", serif;
   font-weight: 300;
   margin-bottom: 10px;
+}
+@media (max-width: 680px) {
+  main #grey_space .grey_space_text h2 {
+    font-size: 36px;
+  }
 }
 main #grey_space .grey_space_text p {
   font-size: 17px;
@@ -1834,6 +1844,17 @@ main #listofproducts {
 }
 main #listofproducts .left_part {
   margin-top: 12px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1200px) {
+  main #listofproducts .left_part {
+    padding-right: 60px;
+  }
+}
+@media (max-width: 992px) {
+  main #listofproducts .left_part {
+    padding: 0 30px;
+  }
 }
 main #listofproducts .left_part .prod_categories {
   margin-bottom: 50px;
@@ -1908,6 +1929,16 @@ main #listofproducts .left_part .price_slider .slider_line {
   position: relative;
   width: 265px;
 }
+@media (max-width: 1200px) {
+  main #listofproducts .left_part .price_slider .slider_line {
+    width: 177px;
+  }
+}
+@media (max-width: 992px) {
+  main #listofproducts .left_part .price_slider .slider_line {
+    width: 100%;
+  }
+}
 main #listofproducts .left_part .price_slider .slider_line::before {
   content: "";
   position: absolute;
@@ -1940,9 +1971,24 @@ main #listofproducts .left_part .price_slider .slider_info {
   margin-top: 20px;
   align-items: center;
 }
+@media (max-width: 1200px) {
+  main #listofproducts .left_part .price_slider .slider_info {
+    gap: 20px;
+  }
+}
+@media (max-width: 992px) {
+  main #listofproducts .left_part .price_slider .slider_info {
+    justify-content: space-between;
+  }
+}
 main #listofproducts .left_part .price_slider .slider_info small {
   color: #6d6a6a;
   font-size: 12px;
+}
+@media (max-width: 1200px) {
+  main #listofproducts .left_part .price_slider .slider_info small {
+    white-space: nowrap;
+  }
 }
 main #listofproducts .left_part .price_slider .slider_info a {
   color: #1b1b1b;
@@ -1954,14 +2000,39 @@ main #listofproducts .left_part .price_slider .slider_info a {
 main #listofproducts .left_part .price_slider .slider_info a:hover {
   color: #f34f3f;
 }
+@media (max-width: 992px) {
+  main #listofproducts .response_pad {
+    padding: 0 15px;
+  }
+}
 main #listofproducts p {
   font-size: 12px;
   color: #8b8b8b;
   margin-bottom: 0;
 }
+@media (max-width: 992px) {
+  main #listofproducts p {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 768px) {
+  main #listofproducts p {
+    margin-bottom: 20px;
+  }
+}
 main #listofproducts .serpen_sortia {
   display: flex;
   justify-content: end;
+}
+@media (max-width: 992px) {
+  main #listofproducts .serpen_sortia {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 768px) {
+  main #listofproducts .serpen_sortia {
+    justify-content: flex-start;
+  }
 }
 main #listofproducts .serpen_sortia .select_option {
   position: relative;

@@ -2,7 +2,7 @@ if (products.length > 0) {
     products.slice(4, 13).map((element, index) => {
         const RowList = document.getElementById("map_row_list")
         data1 = `
-        <div class="col-xl-4 col-md-6 col-sm-12 px-4">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 px-4">
         <div class="filter_card">
             <div class="card_image">
                 <img src="${element.images}"
