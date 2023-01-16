@@ -35,13 +35,55 @@
 #standard_product {
     padding: 80px 0 0 0;
     font-family: $second_font;
-
+    @media(max-width:680px){
+        padding: 80px 40px 0 40px;
+    }
+    
+    #col_with_photos{
+        @media(max-width: 992px){
+            margin-bottom: 20px;
+        }
+        @media(max-width: 768px){
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        #small_photos_flex{
+            @media (max-width:768px){
+                display: flex;
+                width: 100%;
+                margin-bottom: 15px;
+                //flex-wrap: wrap;
+                gap: 26px;
+            }
+            @media (max-width:576px){
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    }
     .small_image {
         width: 118px;
         padding-bottom: 20px;
         margin: 0 0px 0 15px;
         @media(max-width:1024px) {
             margin-left: 30px;
+        }
+        @media(max-width:768px) {
+            margin-left:0px;
+            width: 33%;
+            padding-bottom: 0px;
+        }
+        @media(max-width:576px) {
+            margin-left:0px;
+            width: 48%;
+        }
+        @media(max-width:454px) {
+            margin-left:0px;
+            width: 47.5%;
+        }
+        @media(max-width:380px) {
+            margin-left:0px;
+            width: 47.3%;
         }
 
         img {
@@ -53,12 +95,27 @@
                 width: 118px;
                 height: 83px;
             }
+            @media(max-width:992px) {
+                width: 118px;
+                height: 155px;
+            }
+            @media(max-width:768px) {
+                width: 100%;
+                height: 130px;
+            }
+            @media(max-width:576px) {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
     #big_photo{
         @media(max-width:1024px) {
             margin-left: 13px;
+        }
+        @media(max-width:768px) {
+            margin-left: 0px;
         }
     }
 
@@ -67,6 +124,10 @@
 
         @media(max-width:1200px) {
             padding: 0 0 0 15px;
+        }
+        @media (max-width:768px){
+            padding: 0 0 0 0px;
+            width: 100%;
         }
 
         img {
@@ -78,11 +139,29 @@
                 width: 305px;
                 height: 394px;
             }
+            @media(max-width:992px) {
+                width: 510px;
+                height: 680px;
+            }
+            @media(max-width:768px) {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
     .right_addcart_side {
         padding-left: 50px;
+        @media(max-width:1200px){
+            padding-left: 0;
+        }
+        @media(max-width:1024px){
+            padding-left: 20px;
+        }
+        @media(max-width:768px) {
+            padding-left: 0px;
+           
+        }
 
         h2 {
             font-size: 38px;
@@ -106,6 +185,9 @@
 
         .addtocart_container {
             display: flex;
+            @media(max-width:576px){
+                flex-wrap: wrap;
+            }
 
             .quantity_field {
                 display: flex;
@@ -114,6 +196,11 @@
                 align-items: center;
                 border: 1px solid #eee;
                 padding: 0 22px;
+                @media(max-width:576px){
+                    width: 100%;
+                    padding: 12px 22px;
+                    margin-bottom: 20px;
+                }
 
                 .quantity {
                     font-size: 12px;
@@ -186,6 +273,7 @@
         padding: 0;
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
         li{
             padding: 15px 47px;
             border: 1px solid #eee;
@@ -194,10 +282,19 @@
             font-weight: 500;
             border-bottom: none;
             cursor: pointer;
+            @media(max-width:400px){
+                padding: 15px 20px;
+            }
         }
         #additional_info{
             border-left: none;
             border-right: none;
+            @media(max-width: 768px){
+                border-left: 1px solid #eee;
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+
+            }
         }
         .selected{
             background-color: #f34f3f;
@@ -210,6 +307,9 @@
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding: 73px 0 80px 0;
+    @media(max-width:680px){
+        padding: 73px 40px 80px 40px;
+    }
     .first_d_none{
         h3{
             font-family: $nineteen_font;
@@ -357,6 +457,9 @@
 
 #related_products{
     padding: 120px 0 60px 0;
+    @media(max-width:680px){
+        padding: 120px 40px 60px 40px;
+    }
     h5{
         font-size: 12px;
         font-family: $second_font;

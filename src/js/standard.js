@@ -26,11 +26,46 @@ if (products.length > 0) {
             </div>
         </div>
     </div>`
-    if (RowStandard) {
-        RowStandard.innerHTML += dataStandard;
-    }
+        if (RowStandard) {
+            RowStandard.innerHTML += dataStandard;
+        }
     })
 }
+
+// function increaseValue() {
+//     var value = parseInt(document.querySelector('.count_number').innerHTML, 0);
+//     value = isNaN(value) ? 0 : value;
+//     value++;
+//     document.querySelector('.count_number').innerHTML = value;
+//   }
+
+//   function decreaseValue() {
+//     var value = parseInt(document.querySelector('.count_number').innerHTML, 0);
+//     value = isNaN(value) ? 0 : value;
+//     value < 1 ? value = 1 : '';
+//     value--;
+//     document.querySelector('.count_number').innerHTML = value;
+//   }
+
+const decrementCount = document.querySelector(".decrease");
+const incrementCount = document.querySelector(".increase");
+
+const totalCount = document.querySelector(".count_number");
+var count = 0;
+totalCount.innerHTML = count;
+
+const Decrement = () => {
+    if (totalCount.innerHTML > 0) {
+        count--;
+        totalCount.innerHTML = count;
+    }
+};
+const Increment = () => {
+    count++;
+    totalCount.innerHTML = count;
+};
+incrementCount.addEventListener("click", Increment);
+decrementCount.addEventListener("click", Decrement);
 
 const bigButton1 = document.getElementById("description")
 const bigButton2 = document.getElementById("additional_info")

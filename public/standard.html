@@ -753,12 +753,72 @@
                                 <div class="close_button">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
-                                <li><a class="home_line" href="#">HOME</a><i class="bi bi-caret-down-fill"></i></li>
-                                <li><a href="#">PAGES</a><i class="bi bi-caret-right-fill"></i></li>
-                                <li><a href="#">SHOP</a><i class="bi bi-caret-right-fill"></i></li>
-                                <li><a href="#">PORTFOLIO</a><i class="bi bi-caret-right-fill"></i></li>
-                                <li><a href="#">BLOG</a><i class="bi bi-caret-right-fill"></i></li>
-                                <li><a href="#">ELEMENTS</a><i class="bi bi-caret-right-fill"></i></li>
+                                <div class="accord_all" id="acc1">
+                                    <li class="accord-visible"><a class="home_line" href="#">HOME</a><i
+                                            class="bi bi-caret-down-fill"></i></li>
+                                    <ul class="accord-hidden" id="hidden1">
+                                        <li>
+                                            <a href="../public/index.html">
+                                                <span>Main Home</span>
+                                            </a>
+                                        </li>
+                                        <li>Grid Home</li>
+                                        <li>Flower Shop</li>
+                                        <li>Animated Slider</li>
+                                        <li>Metro Showcase</li>
+                                        <li>Carousel Showcase</li>
+                                        <li>Landing</li>
+                                    </ul>
+                                </div>
+                                <div class="accord_all" id="acc2">
+                                    <li class="accord-visible"><a href="#">PAGES</a><i
+                                            class="bi bi-caret-right-fill"></i></li>
+                                    <ul class="accord-hidden" id="hidden2">
+                                        <li>About Us</li>
+                                        <li>FAQ Page</li>
+                                        <li><a href="../public/contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="accord_all" id="acc3">
+                                    <li class="accord-visible"><a href="#">SHOP</a><i
+                                            class="bi bi-caret-right-fill"></i></li>
+                                    <ul class="accord-hidden" id="hidden3">
+                                        <li>Product Types</li>
+                                        <li>Shop Pages</li>
+                                        <li>Shop Types</li>
+                                        <li>Shop Layouts</li>
+                                    </ul>
+                                </div>
+                                <div class="accord_all" id="acc4">
+                                    <li class="accord-visible"><a href="#">PORTFOLIO</a><i
+                                            class="bi bi-caret-right-fill"></i></li>
+                                    <ul class="accord-hidden" id="hidden4">
+                                        <li>Standard</li>
+                                        <li>Gallery</li>
+                                        <li>Masonry</li>
+                                        <li>Portfolio Layouts</li>
+                                        <li>Portfolio Single</li>
+                                    </ul>
+                                </div>
+                                <div class="accord_all" id="acc5">
+                                    <li class="accord-visible"><a href="#">BLOG</a><i
+                                            class="bi bi-caret-right-fill"></i></li>
+                                    <ul class="accord-hidden" id="hidden5">
+                                        <li>Masonry</li>
+                                        <li>Standard</li>
+                                        <li>Post Types</li>
+                                    </ul>
+                                </div>
+                                <div class="accord_all" id="acc6">
+                                    <li class="accord-visible"><a href="#">ELEMENTS</a><i
+                                            class="bi bi-caret-right-fill"></i></li>
+                                    <ul class="accord-hidden" id="hidden6">
+                                        <li>Classic</li>
+                                        <li>Infographic</li>
+                                        <li>Interactive</li>
+                                        <li>Typography</li>
+                                    </ul>
+                                </div>
                             </ul>
                         </div>
                     </div>
@@ -783,7 +843,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 px-0 d-flex" id="col_with_photos">
-                        <div class="col-xl-3">
+                        <div class="col-xl-3" id="small_photos_flex">
                             <div class="small_image">
                                 <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4-300x400.jpg"
                                     alt="">
@@ -808,7 +868,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="right_addcart_side">
                             <h2>Orange Amaryllis</h2>
                             <p class="product_price2">$259</p>
@@ -823,11 +883,11 @@
                                     </div>
                                     <div class="count_changing_field">
                                         <span class="decrease"><i class="bi bi-caret-left-fill"></i></span>
-                                        <span class="count_number">0</span>
+                                        <span class="count_number"></span>
                                         <span class="increase"><i class="bi bi-caret-right-fill"></i></span>
                                     </div>
                                 </div>
-                                <button>ADD TO CART</button>
+                                <button onclick="AddToCart(id)">ADD TO CART</button>
                             </div>
                             <ul>
                                 <li>SKU: <span>989873</span></li>
