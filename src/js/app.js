@@ -363,11 +363,11 @@ for (var i of products.slice(0, 8)) {
     BtmChange.appendChild(CardPrice)
     CardPrice.appendChild(Price)
 
-    
-   const Row= document.getElementById("map_row")
-   if (Row) {
-    Row.appendChild(col)
-   }
+
+    const Row = document.getElementById("map_row")
+    if (Row) {
+        Row.appendChild(col)
+    }
     CartBtn.setAttribute("onclick", "AddToCart(id)");
     CartBtn.setAttribute("id", i.id);
 
@@ -408,7 +408,7 @@ function renderSubtotal() {
         totalItems += item.numberOfUnits
     })
     if (subtotalNav) {
-        subtotalNav.innerHTML =`CART ($${totalPrice})`
+        subtotalNav.innerHTML = `CART ($${totalPrice})`
     }
     if (subtotal) {
         subtotal.innerHTML = `$${totalPrice}`
@@ -421,31 +421,31 @@ function renderSubtotal() {
 
 function renderCartItems() {
     if (CartAddPlace) {
-        CartAddPlace.innerHTML ="";
+        CartAddPlace.innerHTML = "";
     }
     cart.forEach((item) => {
         if (CartAddPlace) {
             CartAddPlace.innerHTML += `
-        <li class="empty_cart_card">
-          <div class="image_holder">
-            <img src="${item.images}" alt="${item.name}">
-          </div>
-          <div class="card_info_holder">
-            <h6>${item.name}</h6>
-            <div class="card_numbers">
-                <div class="count_changing">
-                  <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
-                  <span class="product_count">${item.numberOfUnits}</span>
-                  <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
-                </div>
-                <span class="mini_product_price"><small>$</small>${item.price}</span>
-            </div>              
-          </div>
-          <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
-             <i class="fa-solid fa-xmark"></i>
-          </div>
-        </li>
-        `
+            <li class="empty_cart_card">
+              <div class="image_holder">
+                <img src="${item.images}" alt="${item.name}">
+              </div>
+              <div class="card_info_holder">
+                <h6>${item.name}</h6>
+                <div class="card_numbers">
+                    <div class="count_changing">
+                      <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
+                      <span class="product_count">${item.numberOfUnits}</span>
+                      <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
+                    </div>
+                    <span class="mini_product_price"><small>$</small>${item.price}</span>
+                </div>              
+              </div>
+              <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
+                 <i class="fa-solid fa-xmark"></i>
+              </div>
+            </li>
+            `
         }
     })
 }
@@ -474,6 +474,7 @@ function ChangeNumberOfUnits(action, id) {
 
     updateCart()
 }
+
 
 function filterProduct(value) {
     let Buttons = document.querySelectorAll(".button-value")

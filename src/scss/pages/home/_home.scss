@@ -9,6 +9,7 @@ body {
         #slider_background {
             position: relative;
             height: 100%;
+            overflow-y: hidden;
 
             #pos_relative {
                 position: relative;
@@ -107,6 +108,7 @@ body {
                             animation: move 40s ease;
                             position: absolute;
                         }
+<<<<<<< HEAD
 
                         @keyframes move {
                             0% {
@@ -114,6 +116,14 @@ body {
                                 transform: scale(1.0);
                             }
 
+=======
+                        @keyframes move {
+                            0% {
+                                transform-origin: center center;
+                                transform: scale(1.0);
+                            }
+
+>>>>>>> cc54f164625c07a9b862c1cf24a5b87e1785bb97
                             100% {
                                 transform: scale(1.2);
                             }
