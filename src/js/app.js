@@ -276,6 +276,7 @@ const products = [
         sale: "",
     },
 ]
+
 const CartAddPlace = document.getElementById("cart_adding_place")
 const subtotal = document.querySelector(".total_sum_self")
 const subtotalNav = document.querySelector(".total_products_nav")
@@ -362,11 +363,11 @@ for (var i of products.slice(0, 8)) {
     BtmChange.appendChild(CardPrice)
     CardPrice.appendChild(Price)
 
-
-    const Row = document.getElementById("map_row")
-    if (Row) {
-        Row.appendChild(col)
-    }
+    
+   const Row= document.getElementById("map_row")
+   if (Row) {
+    Row.appendChild(col)
+   }
     CartBtn.setAttribute("onclick", "AddToCart(id)");
     CartBtn.setAttribute("id", i.id);
 
@@ -407,7 +408,7 @@ function renderSubtotal() {
         totalItems += item.numberOfUnits
     })
     if (subtotalNav) {
-        subtotalNav.innerHTML = `CART ($${totalPrice})`
+        subtotalNav.innerHTML =`CART ($${totalPrice})`
     }
     if (subtotal) {
         subtotal.innerHTML = `$${totalPrice}`
@@ -420,33 +421,33 @@ function renderSubtotal() {
 
 function renderCartItems() {
     if (CartAddPlace) {
-        CartAddPlace.innerHTML = "";
-        cart.forEach((item) => {
-            if (CartAddPlace) {
-                CartAddPlace.innerHTML += `
-                <li class="empty_cart_card">
-                  <div class="image_holder">
-                    <img src="${item.images}" alt="${item.name}">
-                  </div>
-                  <div class="card_info_holder">
-                    <h6>${item.name}</h6>
-                    <div class="card_numbers">
-                        <div class="count_changing">
-                          <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
-                          <span class="product_count">${item.numberOfUnits}</span>
-                          <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
-                        </div>
-                        <span class="mini_product_price"><small>$</small>${item.price}</span>
-                    </div>              
-                  </div>
-                  <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
-                     <i class="fa-solid fa-xmark"></i>
-                  </div>
-                </li>
-                `
-            }
-        })
+        CartAddPlace.innerHTML ="";
     }
+    cart.forEach((item) => {
+        if (CartAddPlace) {
+            CartAddPlace.innerHTML += `
+        <li class="empty_cart_card">
+          <div class="image_holder">
+            <img src="${item.images}" alt="${item.name}">
+          </div>
+          <div class="card_info_holder">
+            <h6>${item.name}</h6>
+            <div class="card_numbers">
+                <div class="count_changing">
+                  <span class="btn_minus" onclick="ChangeNumberOfUnits('minus', ${item.id})">-</span>
+                  <span class="product_count">${item.numberOfUnits}</span>
+                  <span class="btn_plus" onclick="ChangeNumberOfUnits('plus',  ${item.id})">+</span>
+                </div>
+                <span class="mini_product_price"><small>$</small>${item.price}</span>
+            </div>              
+          </div>
+          <div class="cart_remover" onclick="removeItemFromCart(${item.id})">
+             <i class="fa-solid fa-xmark"></i>
+          </div>
+        </li>
+        `
+        }
+    })
 }
 
 function removeItemFromCart(id) {
@@ -519,18 +520,13 @@ var swiper = new Swiper(".loop_slide", {
     },
 });
 
-const mybutton = document.querySelector(".taptotop");
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    mybutton.style.visibility = "visible";
-    mybutton.style.opacity = "1";
-} else {
-    mybutton.style.visibility = "hidden";
-    mybutton.style.opacity = "0";
-  }
+const SelectSorting=document.querySelector(".select_heading")
+if(SelectSorting){
+    SelectSorting.addEventListener("click",()=>{
+        document.querySelector(".sorting_popup_dnone").classList.toggle("hiding")
+    })
 }
+
+
 
 
